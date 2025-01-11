@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import MainLayout from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
 import FounderCard from "@/components/ui/cards/Founder";
@@ -18,9 +19,9 @@ export default function NamePage() {
             </Button>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* <StartupCard />
             <StartupCard />
-            <StartupCard />
-            <StartupCard />
+            <StartupCard /> */}
           </div>
         </section>
 
@@ -32,9 +33,9 @@ export default function NamePage() {
             </Button>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* <FounderCard/>
           <FounderCard/>
-          <FounderCard/>
-          <FounderCard/>
+          <FounderCard/> */}
           </div>
         </section>
 
@@ -46,9 +47,9 @@ export default function NamePage() {
             </Button>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* <VentureCapitalCard/>
             <VentureCapitalCard/>
-            <VentureCapitalCard/>
-            <VentureCapitalCard/>
+            <VentureCapitalCard/> */}
           </div>
         </section>
       </div>
