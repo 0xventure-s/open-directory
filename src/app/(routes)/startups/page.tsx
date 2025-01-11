@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
-import StartupCard from "@/components/ui/cards/Startup";
+import StartupGrid from "@/components/ui/gridElements/StartupGrid";
+import { startups } from "@/seed/seed";
 import Link from "next/link";
 
+  const startupsPage = startups
+
 export default function StartupPage() {
+
+
   return (
     <main className="flex-1 p-6 overflow-y-auto">
       <div className="space-y-12">
@@ -16,14 +21,9 @@ export default function StartupPage() {
               </Link>
             </Button>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 grid-cols-1">
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
+          <div>    
+          
+            <StartupGrid startups={startupsPage}/>
           </div>
         </section>
       </div>

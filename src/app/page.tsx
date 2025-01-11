@@ -1,8 +1,9 @@
 import MainLayout from "@/components/layout/MainLayout";
 import { Button } from "@/components/ui/button";
+import FounderCard from "@/components/ui/cards/Founder";
 import StartupCard from "@/components/ui/cards/Startup";
+import VentureCapitalCard from "@/components/ui/cards/Ventures";
 import Link from "next/link";
-
 
 export default function NamePage() {
   return (
@@ -20,11 +21,9 @@ export default function NamePage() {
             <StartupCard />
             <StartupCard />
             <StartupCard />
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
           </div>
         </section>
+
         <section>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Startups Destacadas</h2>
@@ -33,11 +32,12 @@ export default function NamePage() {
             </Button>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
+          <FounderCard/>
+          <FounderCard/>
+          <FounderCard/>
           </div>
         </section>
+
         <section>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Startups Destacadas</h2>
@@ -46,13 +46,12 @@ export default function NamePage() {
             </Button>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <StartupCard />
-            <StartupCard />
-            <StartupCard />
+            <VentureCapitalCard/>
+            <VentureCapitalCard/>
+            <VentureCapitalCard/>
           </div>
         </section>
       </div>
     </MainLayout>
   );
 }
-

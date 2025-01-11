@@ -1,5 +1,17 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
-import { BookOpen, Briefcase, Building2, Calendar, Heart, LogIn, ShoppingBag, Users, X } from 'lucide-react';
+import {
+  BookOpen,
+  Briefcase,
+  Building2,
+  Calendar,
+  Heart,
+  LogIn,
+  ShoppingBag,
+  Users,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -22,7 +34,11 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
         ></div>
       )}
 
-      <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-white border-r transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:translate-x-0 overflow-y-auto`}>
+      <aside
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white border-r transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out md:translate-x-0 overflow-y-auto`}
+      >
         <div className="flex flex-col h-full">
           <div className="sticky top-0 z-10 bg-white">
             <div className="flex h-[80px] items-center border-b px-6">
@@ -78,31 +94,34 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   Venture Capitals
                 </Button>
               </Link>
-              <Link href="/events">
+              <Link href="/">
                 <Button
                   variant={pathname === "/events" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
                   onClick={onClose}
+                  disabled
                 >
                   <Calendar className="h-4 w-4" />
                   Eventos
                 </Button>
               </Link>
-              <Link href="/resources">
+              <Link href="/">
                 <Button
                   variant={pathname === "/resources" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
                   onClick={onClose}
+                  disabled
                 >
                   <BookOpen className="h-4 w-4" />
                   Recursos
                 </Button>
               </Link>
-              <Link href="/shop">
+              <Link href="/">
                 <Button
                   variant={pathname === "/shop" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
                   onClick={onClose}
+                  disabled
                 >
                   <ShoppingBag className="h-4 w-4" />
                   Shop
@@ -111,10 +130,15 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
             </div>
             <div className="border-t border-l-0 w-5/6 self-center bg-red-500 my-2"></div>
             <div className="flex flex-col gap-2 p-2">
-              <Button variant="ghost" className="w-full justify-start gap-2">
-                <Heart className="h-4 w-4" />
-                Favoritos
-              </Button>
+              <Link href="/favorites">
+                <Button
+                  variant={pathname === "/shop" ? "link" : "ghost"}
+                  className="w-full justify-start gap-2"
+                >
+                  <Heart className="h-4 w-4" />
+                  Favoritos
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -129,4 +153,3 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
     </>
   );
 };
-
