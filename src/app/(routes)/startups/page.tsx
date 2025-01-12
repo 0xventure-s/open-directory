@@ -21,7 +21,7 @@ export default function StartupPage() {
   const [open, setOpen] = useState(false);
 
   return (
-    <main className="flex-1 p-6 overflow-y-auto">
+    <main className="flex-1 p-6 overflow-y-auto md:p-8">
       <div className="space-y-12">
         {/* Startups Preview */}
         <section>
@@ -31,12 +31,11 @@ export default function StartupPage() {
               <DialogTrigger asChild>
                 <Button variant="outline">+ Agregar Startup</Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
+              <DialogContent className="sm:max-w-[425px] max-w-[90%] mx-auto p-4 rounded">
                 <DialogHeader>
                   <DialogTitle>Agregar Startup</DialogTitle>
                   <DialogDescription>
-                    Ingrese los detalles de la nueva startup aquí. Haga clic en
-                    guardar cuando haya terminado.
+                    Ingrese los detalles de la nueva startup aquí.
                   </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">
