@@ -31,7 +31,7 @@ export default function StartupPage() {
               <DialogTrigger asChild>
                 <Button variant="outline">+ Agregar Startup</Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px] max-w-[90%] mx-auto p-4 rounded">
+              <DialogContent className="max-w-[90%] lg:w-auto mx-auto  rounded">
                 <DialogHeader>
                   <DialogTitle>Agregar Startup</DialogTitle>
                   <DialogDescription>
