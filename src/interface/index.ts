@@ -1,4 +1,5 @@
 export interface Startup {
+  id: string;
   name: string;
   logosrc: string;
   location: string;

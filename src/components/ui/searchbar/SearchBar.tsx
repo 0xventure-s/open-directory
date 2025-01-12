@@ -1,8 +1,11 @@
 "use client";
 import { Search } from "lucide-react";
 import { Input } from "../input";
+import { useState } from "react";
 
 export default function SearchBar() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div className="flex flex-col my-1 ">
       <header className="flex h-14 lg:h-[39px] items-center gap-4  bg-card px-6">
@@ -14,6 +17,8 @@ export default function SearchBar() {
                 type="search"
                 placeholder="Buscar startups, founders, VCs..."
                 className="w-full bg-background shadow-none appearance-none pl-8"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
           </form>

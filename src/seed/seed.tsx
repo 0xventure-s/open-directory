@@ -4,6 +4,7 @@ import { TrendingUpIcon, GlobeIcon, RocketIcon } from "lucide-react";
 export const startups: Startup[] = [
   {
     name: "Eventum",
+    id: "4",
     logosrc:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dise%C3%B1o%20sin%20t%C3%ADtulo%20-%202024-05-01T123845.623-IDKnUaDWnDc91fG9RWhIbqMsFIy3Ld.png",
     location: "Catamarca, Argentina",
@@ -33,6 +34,7 @@ export const startups: Startup[] = [
     },
   },
   {
+    id: "2",
     name: "Techify",
     logosrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dise%C3%B1o%20sin%20t%C3%ADtulo%20-%202024-05-01T123845.623-IDKnUaDWnDc91fG9RWhIbqMsFIy3Ld.png",
     location: "Buenos Aires, Argentina",
@@ -61,6 +63,7 @@ export const startups: Startup[] = [
     },
   },
   {
+    id: "3",
     name: "Greenify",
     logosrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dise%C3%B1o%20sin%20t%C3%ADtulo%20-%202024-05-01T123845.623-IDKnUaDWnDc91fG9RWhIbqMsFIy3Ld.png",
     location: "Mendoza, Argentina",
@@ -147,6 +150,7 @@ export const founderCards: FounderCards[] = [
     },
   },
 ];
+
 import { Ventures } from "@/interface";
 
 export const ventures: Ventures[] = [
