@@ -1,6 +1,7 @@
+import { getVentures } from "@/actions/startups";
 import { Button } from "@/components/ui/button";
 import VentureGrid from "@/components/ui/gridElements/VenturesGrid";
-import { getVentures } from "@/pagination/startups";
+
 import Link from "next/link";
 
 

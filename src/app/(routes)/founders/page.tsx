@@ -1,6 +1,7 @@
+import { getPersons } from "@/actions/startups";
 import { Button } from "@/components/ui/button";
 import FounderGrid from "@/components/ui/gridElements/FoundersGrid";
-import { getPersons } from "@/pagination/startups";
+
 
 import Link from "next/link";
 

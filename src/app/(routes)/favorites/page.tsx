@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import StartupCard from "@/components/ui/cards/Startup";
-import { getStartups } from "@/pagination/startups";
+
 import { useFavoriteStore } from "@/store/favoritesStore";
 import { Startup } from "@/interface";
+import { getStartups } from "@/actions/startups";
 
 export default function FavoritesPage() {
   const [startups, setStartups] = useState<Startup[]>([]); // Inicializas startups como un array vacío

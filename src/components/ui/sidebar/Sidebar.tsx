@@ -7,7 +7,7 @@ import {
   Building2,
   Calendar,
   Heart,
-  LogIn,
+  MessageCirclePlus,
   ShoppingBag,
   Users,
   X,
@@ -94,6 +94,17 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   Venture Capitals
                 </Button>
               </Link>
+              <Link href="/resources">
+                <Button
+                  variant={pathname === "/resources" ? "link" : "ghost"}
+                  className="w-full justify-start gap-2"
+                  onClick={onClose}
+                  
+                >
+                  <BookOpen className="h-4 w-4" />
+                  Recursos
+                </Button>
+              </Link>
               <Link href="/">
                 <Button
                   variant={pathname === "/events" ? "link" : "ghost"}
@@ -103,17 +114,6 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                 >
                   <Calendar className="h-4 w-4" />
                   Eventos
-                </Button>
-              </Link>
-              <Link href="/">
-                <Button
-                  variant={pathname === "/resources" ? "link" : "ghost"}
-                  className="w-full justify-start gap-2"
-                  onClick={onClose}
-                  disabled
-                >
-                  <BookOpen className="h-4 w-4" />
-                  Recursos
                 </Button>
               </Link>
               <Link href="/">
@@ -143,10 +143,11 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
           </div>
 
           <div className="sticky bottom-0 bg-white border-t p-4">
-            <Button className="w-full gap-2" variant="outline">
-              <LogIn className="h-4 w-4" />
-              Login
-            </Button>
+            <Link href="www.wa.me/+543834293512">
+            <Button className="w-full gap-2 hover:bg-blue-400 hover:transition-all hover:text-white" variant="outline">
+              <MessageCirclePlus className="h-4 w-4" />
+              Feedback
+            </Button></Link>
           </div>
         </div>
       </aside>
