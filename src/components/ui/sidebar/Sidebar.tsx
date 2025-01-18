@@ -114,14 +114,11 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   variant={pathname === "/events" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
                   onClick={onClose}
-                  disabled
                 >
                   <Calendar className="h-4 w-4" />
                   <HoverCard>
-                    <HoverCardTrigger>Hover</HoverCardTrigger>
-                    <HoverCardContent>
-                      The React Framework – created and maintained by @vercel.
-                    </HoverCardContent>
+                    <HoverCardTrigger>Eventos</HoverCardTrigger>
+                    <HoverCardContent>Proximamente...</HoverCardContent>
                   </HoverCard>
                 </Button>
               </Link>
