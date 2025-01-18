@@ -1,10 +1,3 @@
-"use client";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-
 import { Button } from "@/components/ui/button";
 import {
   BookOpen,
@@ -13,6 +6,7 @@ import {
   Calendar,
   Heart,
   MessageCirclePlus,
+  NotebookText,
   ShoppingBag,
   Users,
   X,
@@ -86,7 +80,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   onClick={onClose}
                 >
                   <Users className="h-4 w-4" />
-                  Founders
+                  Builders
                 </Button>
               </Link>
               <Link href="/ventures">
@@ -113,13 +107,10 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                 <Button
                   variant={pathname === "/events" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
-                  onClick={onClose}
+                  disabled
                 >
                   <Calendar className="h-4 w-4" />
-                  <HoverCard>
-                    <HoverCardTrigger>Eventos</HoverCardTrigger>
-                    <HoverCardContent>Proximamente...</HoverCardContent>
-                  </HoverCard>
+                  Eventos (-)
                 </Button>
               </Link>
               <Link href="/">
@@ -130,7 +121,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   disabled
                 >
                   <ShoppingBag className="h-4 w-4" />
-                  Shop
+                  Shop (-)
                 </Button>
               </Link>
             </div>
@@ -143,6 +134,15 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                 >
                   <Heart className="h-4 w-4" />
                   Favoritos
+                </Button>
+              </Link>
+              <Link href="/aracc">
+                <Button
+                  variant={pathname === "/shop" ? "link" : "ghost"}
+                  className="w-full justify-start gap-2"
+                >
+                  <NotebookText className="h-4 w-4" />
+                  Sobre Ar/acc
                 </Button>
               </Link>
             </div>

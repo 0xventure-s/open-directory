@@ -17,8 +17,8 @@ export default async function VenturePage() {
         {/* Startups Preview */}
         <section>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold">Startups Destacadas</h2>
-            <Button variant="outline" asChild>
+            <h2 className="text-2xl font-bold">Ventures Capital Argentinos</h2>
+            <Button variant="outline" className="border-blue-200" asChild>
               <Link href="https://www.google.com">
                 + Agregar Venture 
               </Link>

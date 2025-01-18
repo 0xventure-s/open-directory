@@ -106,10 +106,11 @@ export default function StartupCard({ startup }: Props) {
         <div className="flex -space-x-1 pt-2">
           {startup.founders.map((founder, i) => (
             <Avatar key={i} className="h-8 w-8 border-2 border-background">
+              <Link href={"/"}> 
               <AvatarImage
                 src={`/founders/${founder.image}`}
                 alt={founder.name}
-              />
+                /></Link>
               <AvatarFallback>{founder.name[0]}</AvatarFallback>
             </Avatar>
           ))}

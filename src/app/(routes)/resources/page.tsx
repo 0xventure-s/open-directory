@@ -9,7 +9,7 @@ export default function StartupPage() {
           {/* Startups Preview */}
           <section>
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold">Startups Destacadas</h2>
+              <h2 className="text-2xl font-bold">Recursos</h2>
               <Button variant="outline" asChild>
                 <Link href="https://www.google.com">+ Agregar Venture</Link>
               </Button>

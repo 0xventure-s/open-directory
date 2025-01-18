@@ -16,9 +16,9 @@ export default async function StartupPage() {
           {/* Startups Preview */}
           <section>
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold">Startups Destacadas</h2>
-              <Button variant="outline" asChild>
-                <Link href="https://www.google.com">+ Agregar Founder</Link>
+              <h2 className="text-2xl font-bold">Builders Destacadas</h2>
+              <Button variant="outline" className="border-blue-200" asChild>
+                <Link href="https://www.google.com">+ Agregar Builders</Link>
               </Button>
             </div>
             <div>
