@@ -149,7 +149,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
           </div>
 
           <div className="sticky bottom-0 bg-white border-t p-4">
-            <Link href="www.wa.me/+543834293512">
+            <Link href="www.wa.me/+543834293512" target="_blank">
               <Button
                 className="w-full gap-2 hover:bg-blue-400 hover:transition-all hover:text-white"
                 variant="outline"
