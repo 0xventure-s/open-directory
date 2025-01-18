@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Startup {
+  id              String   @id @unique @default(uuid())
+  name            String
+  logosrc         String
+  location        String
+  description     String
+  marketType      String
+  marketIcon      String
+  typeName        String 
+  typeIcon        String
+  investmentSerie String?
+  investmentIcon  String?
+  socialWeb       String
+  socialLinkedin  String
+  socialTwitter   String
+  founders        Founder[]
+}
+
+model Founder {
+  id        String  @id @unique @default(uuid())
+  name      String
+  image     String
+  startupId String
+  startup   Startup @relation(fields: [startupId], references: [id])
+}
+
+model Person {
+  id        String  @id @unique @default(uuid())
+  name      String
+  role      String
+  image     String
+  startup   String
+  Linkedin  String
+  Twitter   String
+}
+
+model Venture {
+  id               String   @id @unique @default(uuid())
+  name             String
+  logo             String
+  location         String
+  investmentStages String[]
+  sectors          String[]
+  website          String
+}

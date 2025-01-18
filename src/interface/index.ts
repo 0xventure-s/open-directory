@@ -4,47 +4,42 @@ export interface Startup {
   logosrc: string;
   location: string;
   description: string;
-  market: {
-    type: string;
-    icon: React.ReactNode;
-  };
-  type: {
-    name: string;
-    icon: React.ReactNode;
-  };
-  investment: {
-    serie: string;
-    icon: React.ReactNode;
-  };
+  marketType: string;
+  marketIcon: string;
+  typeName: string;
+  typeIcon: string;
+  investmentSerie: string | null;  // Asegúrate de que sea string | null
+  investmentIcon: string | null;   // Cambié de `string | undefined` a `string | null`
+  socialWeb: string;
+  socialLinkedin: string;
+  socialTwitter: string;
   founders: Founder[];
-  socialLinks: {
-    web: string;
-    linkedin: string;
-    twitter: string;
-  };
 }
+
+
 
 export interface Founder {
+  id: string;
   name: string;
   image: string;
-}
-export interface FounderCards{
-  name: string;
-  role: string;
-  startup: string;
-  image: string;
-  skills: string[];
-  socialLinks: {
-    linkedIn?: string;
-    twitter?: string;
-  };
+  startupId: string;
+  
 }
 
+export interface Persons {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+  startup: string;
+  Linkedin: string;
+  Twitter: string;
+}
 export interface Ventures {
-  name: string
-  logo: string
-  location: string
-  investmentStages: string[]
-  sectors: string[]
-  website: string
+  name: string;
+  logo: string;
+  location: string;
+  investmentStages: string[];
+  sectors: string[];
+  website: string;
 }

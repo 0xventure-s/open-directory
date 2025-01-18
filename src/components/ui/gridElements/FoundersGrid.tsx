@@ -1,16 +1,17 @@
-import { FounderCards } from "@/interface";
+
+import { Persons } from "@/interface";
 import FounderCard from "../cards/Founder";
 
 
 interface Props {
-    founder:FounderCards[]
+    person:Persons[]
 }
 
-export default function FounderGrid({founder}:Props) {
+export default function FounderGrid({person}:Props) {
   return (
-    <div  className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 grid-cols-1">
-      {founder.map((founder) => (
-        <FounderCard key={founder.image} founder={founder}/>
+    <div  className="grid gap-6 md:grid-cols-2 lg:flex flex-row grid-cols-1">
+      {person.map((person) => (
+        <FounderCard key={person.image} person={person}/>
       ) )}
     </div>
   );

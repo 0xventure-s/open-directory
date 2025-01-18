@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import VentureGrid from "@/components/ui/gridElements/VenturesGrid";
-import { ventures } from "@/seed/seed";
+import { getVentures } from "@/pagination/startups";
 import Link from "next/link";
 
-const venturesCapitals = ventures
 
-export default function VenturePage() {
+
+export default async function VenturePage() {
+
+  const  venturesCapitals= await getVentures();
+
   return (
     <div>
        <main className="flex-1 p-6 overflow-y-auto">

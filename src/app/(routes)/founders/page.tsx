@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import FounderGrid from "@/components/ui/gridElements/FoundersGrid";
-import { founderCards } from "@/seed/seed";
+import { getPersons } from "@/pagination/startups";
+
 import Link from "next/link";
 
-const founder = founderCards;
 
-export default function StartupPage() {
+
+export default async function StartupPage() {
+  const person = await getPersons();
   return (
     <div>
       <main className="flex-1 p-6 overflow-y-auto">
@@ -19,7 +21,7 @@ export default function StartupPage() {
               </Button>
             </div>
             <div>
-              <FounderGrid founder={founder} />
+              <FounderGrid person={person} />
             </div>
           </section>
         </div>

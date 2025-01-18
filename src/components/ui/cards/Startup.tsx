@@ -12,17 +12,46 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Heart,
   Globe,
-  Twitter,
-  LinkedinIcon as LinkedIn,
-  MapPin,
   TrendingUp,
+  Rocket,
+  Twitter,
+  MapPin,
+  Book,
+  Leaf,
+  ShoppingCart,
+  Car,
+  Home,
+  Camera,
+  Shield,
+  Users,
+  Settings,
+  Tractor,
+  Cpu,
+  Ticket,
 } from "lucide-react";
-
 import { Startup } from "@/interface";
 import Link from "next/link";
 import Image from "next/image";
 import { useFavoriteStore } from "@/store/favoritesStore";
 
+const iconMapping: Record<string, React.ReactNode> = {
+  Fintech: <Globe className="mr-1 h-3 w-3 text-blue-500" />,
+  Healthtech: <Heart className="mr-1 h-3 w-3 text-red-500" />,
+  Edtech: <Book className="mr-1 h-3 w-3 text-yellow-500" />,
+  Ecommerce: <ShoppingCart className="mr-1 h-3 w-3 text-green-500" />,
+  Greentech: <Leaf className="mr-1 h-3 w-3 text-green-400" />,
+  Mobility: <Car className="mr-1 h-3 w-3 text-gray-500" />,
+  AIData: <Cpu className="mr-1 h-3 w-3 text-indigo-500" />,
+  PropTech: <Home className="mr-1 h-3 w-3 text-orange-500" />,
+  MediaTech: <Camera className="mr-1 h-3 w-3 text-purple-500" />,
+  Cybersecurity: <Shield className="mr-1 h-3 w-3 text-teal-500" />,
+  TicketTech: <Ticket className="mr-1 h-3 w-3 text-pink-500" />,
+  CommunityTech: <Users className="mr-1 h-3 w-3 text-blue-400" />,
+  Technologie: <Settings className="mr-1 h-3 w-3 text-gray-400" />,
+  AgriTech: <Tractor className="mr-1 h-3 w-3 text-brown-500" />,
+  rocket: <Rocket className="mr-1 h-3 w-3 text-yellow-400" />,
+  trendingUp: <TrendingUp className="mr-1 h-3 w-3 text-green-600" />,
+};
 
 interface Props {
   startup: Startup;
@@ -43,7 +72,7 @@ export default function StartupCard({ startup }: Props) {
   return (
     <Card className="w-120 h-fit">
       <CardHeader className="flex flex-row items-center gap-4">
-        <div className="h-16 w-16 rounded-lg overflow-hidden  p-1">
+        <div className="h-16 w-16 rounded-lg overflow-hidden p-1">
           <Image
             src={startup.logosrc}
             alt={startup.name}
@@ -64,17 +93,23 @@ export default function StartupCard({ startup }: Props) {
       <CardContent className="space-y-4">
         <p className="text-xs text-muted-foreground">{startup.description}</p>
         <div className="flex flex-wrap gap-1">
-          <Badge variant="secondary">{startup.market.type}</Badge>
-          <Badge variant="secondary">{startup.type.name}</Badge>
+          <Badge variant="secondary">
+            {" "}
+            {iconMapping[startup.marketIcon] || startup.typeIcon}{" "}
+            {startup.marketType}
+          </Badge>
+          <Badge variant="secondary">{startup.typeName}</Badge>
           <Badge className="bg-emerald-500/10 text-emerald-500">
-            <TrendingUp className="mr-1 h-3 w-3" />
-            {startup.investment.serie}
+            {iconMapping[startup.investmentIcon!]} {startup.investmentSerie}
           </Badge>
         </div>
         <div className="flex -space-x-1 pt-2">
           {startup.founders.map((founder, i) => (
             <Avatar key={i} className="h-8 w-8 border-2 border-background">
-              <AvatarImage src={founder.image} alt={founder.name} />
+              <AvatarImage
+                src={`/founders/${founder.image}`}
+                alt={founder.name}
+              />
               <AvatarFallback>{founder.name[0]}</AvatarFallback>
             </Avatar>
           ))}
@@ -83,25 +118,24 @@ export default function StartupCard({ startup }: Props) {
 
       <CardFooter className="flex justify-between p-2">
         <div className="flex gap-1">
-          <Link href={startup.socialLinks.web} target="_blank">
+          <Link href={startup.socialWeb} target="_blank">
             <Button variant="ghost" size="icon">
               <Globe className="h-4 w-4" />
             </Button>
           </Link>
-          <Link href={startup.socialLinks.twitter} target="_blank">
+          <Link href={startup.socialTwitter} target="_blank">
             <Button variant="ghost" size="icon">
               <Twitter className="h-4 w-4" />
-            </Button>
-          </Link>
-          <Link href={startup.socialLinks.linkedin} target="_blank">
-            <Button variant="ghost" size="icon">
-              <LinkedIn className="h-4 w-4" />
             </Button>
           </Link>
         </div>
 
         <Button variant="ghost" size="icon" onClick={toggleFavorite}>
-          <Heart className={`h-4 w-4 ${isFavorite ? "text-red-500" : "text-gray-500"}`} />
+          <Heart
+            className={`h-4 w-4 ${
+              isFavorite ? "text-red-500" : "text-gray-500"
+            }`}
+          />
         </Button>
       </CardFooter>
     </Card>

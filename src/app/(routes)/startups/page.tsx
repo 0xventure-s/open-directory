@@ -1,75 +1,27 @@
-"use client"
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+
+import { FilterStartups } from "@/components/filters/StartupFilters";
 import StartupGrid from "@/components/ui/gridElements/StartupGrid";
-import { startups } from "@/seed/seed";
-import { useState } from "react";
 
-const startupsPage = startups;
+import { Startup } from "@/interface";
+import { getStartups } from "@/pagination/startups";
 
-export default function StartupPage() {
-  const [open, setOpen] = useState(false);
+export default async function StartupPage() {
+  const startups: Startup[] = await getStartups();
 
   return (
-    <main className="flex-1 p-6 overflow-y-auto md:p-8">
-      <div className="space-y-12">
-        {/* Startups Preview */}
+    <main className="flex-1 p-4 overflow-y-auto md:p-6 lg:p-8">
+      <div className="space-y-4 md:space-y-6">
         <section>
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold">Startups Destacadas</h2>
-            <Dialog open={open} onOpenChange={setOpen}>
-              <DialogTrigger asChild>
-                <Button variant="outline">+ Agregar Startup</Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-[90%] lg:w-auto mx-auto  rounded">
-                <DialogHeader>
-                  <DialogTitle>Agregar Startup</DialogTitle>
-                  <DialogDescription>
-                    Ingrese los detalles de la nueva startup aquí.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="grid gap-4 py-4">
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="name" className="text-right">
-                      Nombre
-                    </Label>
-                    <Input id="name" className="col-span-3" />
-                  </div>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="description" className="text-right">
-                      Web o Red social
-                    </Label>
-                    <Input id="description" className="col-span-3" />
-                  </div>
-                </div>
-                <DialogFooter>
-                  <Button
-                    type="submit"
-                    variant={"default"}
-                    className="bg-blue-500 hover:bg-blue-600"
-                    onClick={() => setOpen(false)}
-                  >
-                    Enviar
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl md:text-2xl font-bold">Startups Destacadas</h2>
           </div>
-          <div>
-            <StartupGrid startups={startupsPage} />
+          <FilterStartups />
+          <div className="mt-4">
+            <StartupGrid startups={startups} />
           </div>
         </section>
       </div>
     </main>
   );
 }
+
