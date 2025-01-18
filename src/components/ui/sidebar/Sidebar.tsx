@@ -1,4 +1,9 @@
-"use client"
+"use client";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -99,7 +104,6 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   variant={pathname === "/resources" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
                   onClick={onClose}
-                  
                 >
                   <BookOpen className="h-4 w-4" />
                   Recursos
@@ -113,7 +117,12 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   disabled
                 >
                   <Calendar className="h-4 w-4" />
-                  Eventos
+                  <HoverCard>
+                    <HoverCardTrigger>Hover</HoverCardTrigger>
+                    <HoverCardContent>
+                      The React Framework – created and maintained by @vercel.
+                    </HoverCardContent>
+                  </HoverCard>
                 </Button>
               </Link>
               <Link href="/">
@@ -144,10 +153,14 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
 
           <div className="sticky bottom-0 bg-white border-t p-4">
             <Link href="www.wa.me/+543834293512">
-            <Button className="w-full gap-2 hover:bg-blue-400 hover:transition-all hover:text-white" variant="outline">
-              <MessageCirclePlus className="h-4 w-4" />
-              Feedback
-            </Button></Link>
+              <Button
+                className="w-full gap-2 hover:bg-blue-400 hover:transition-all hover:text-white"
+                variant="outline"
+              >
+                <MessageCirclePlus className="h-4 w-4" />
+                Feedback
+              </Button>
+            </Link>
           </div>
         </div>
       </aside>
