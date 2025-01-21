@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import FounderGrid from "@/components/ui/gridElements/FoundersGrid";
 
 
-import Link from "next/link";
+import Link from "next/link"
 
 
 
