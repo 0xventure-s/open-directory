@@ -74,7 +74,7 @@ export default function StartupCard({ startup }: Props) {
       <CardHeader className="flex flex-row items-center gap-4">
         <div className="h-16 w-16 rounded-lg overflow-hidden p-1">
           <Image
-            src={startup.logosrc}
+            src={`/logosrc/${startup.logosrc}`}
             alt={startup.name}
             className="h-full w-full object-contain rounded-lg"
             width={500}
@@ -105,14 +105,22 @@ export default function StartupCard({ startup }: Props) {
         </div>
         <div className="flex -space-x-1 pt-2">
           {startup.founders.map((founder, i) => (
-            <Avatar key={i} className="h-8 w-8 border-2 border-background">
-              <Link href={"/"}> 
-              <AvatarImage
-                src={`/founders/${founder.image}`}
-                alt={founder.name}
-                /></Link>
-              <AvatarFallback>{founder.name[0]}</AvatarFallback>
-            </Avatar>
+            <div className="relative group" key={i}>
+              <Avatar className="h-8 w-8 border-2 border-background">
+                <Link  href={founder.linkFounder || "/"}>
+                  <AvatarImage
+                    src={founder.image}
+                    alt={founder.name}
+                  />
+                </Link>
+                <AvatarFallback>{founder.name[0]}</AvatarFallback>
+              </Avatar>
+              <div className="absolute left-0 z-10 hidden w-fit p-2 text-sm text-white bg-black rounded-md group-hover:block whitespace-nowrap">
+                <Link href={founder.linkFounder || "/"} className="hover:underline">
+                  {founder.name} 
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </CardContent>

@@ -8,8 +8,8 @@ export interface Startup {
   marketIcon: string;
   typeName: string;
   typeIcon: string;
-  investmentSerie: string | null;  // Asegúrate de que sea string | null
-  investmentIcon: string | null;   // Cambié de `string | undefined` a `string | null`
+  investmentSerie: string | null;  
+  investmentIcon: string | null;   
   socialWeb: string;
   socialLinkedin: string;
   socialTwitter: string;
@@ -22,6 +22,7 @@ export interface Founder {
   id: string;
   name: string;
   image: string;
+  linkFounder:string;
   startupId: string;
   
 }

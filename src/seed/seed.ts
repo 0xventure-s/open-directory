@@ -2,9 +2,10 @@ export const initialData = {
   startup: [
     {
       name: "Eventum",
-      logosrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dise%C3%B1o%20sin%20t%C3%ADtulo%20-%202024-05-01T123845.623-IDKnUaDWnDc91fG9RWhIbqMsFIy3Ld.png",
+      logosrc: "1.png",
       location: "Catamarca, Argentina",
-      description: "Plataforma de ticketing digital que simplifica la venta de entradas, permitiendo a organizadores vender más en menos pasos.",
+      description:
+        "Plataforma de ticketing digital que simplifica la venta de entradas, permitiendo a organizadores vender más en menos pasos.",
       marketType: "TicketTech",
       marketIcon: "TicketTech",
       typeName: "SaaS",
@@ -14,33 +15,307 @@ export const initialData = {
       socialWeb: "https://eventum.com",
       socialLinkedin: "https://linkedin.com/company/eventum",
       socialTwitter: "https://twitter.com/eventum",
-    }
+      founders: [
+        {
+          name: "Lucas Martinez",
+          image: "https://randomuser.me/api/portraits/men/1.jpg",
+          linkFounder: "https://twitter.com/lmartinez",
+        },
+        {
+          name: "Ana García",
+          image: "https://randomuser.me/api/portraits/women/1.jpg",
+          linkFounder: "https://twitter.com/agarcia",
+        },
+        {
+          name: "Random User 1",
+          image: "https://randomuser.me/api/portraits/men/11.jpg",
+          linkFounder: "https://twitter.com/randomuser1",
+        },
+      ],
+    },
+    {
+      name: "FinFlow",
+      logosrc: "2.png",
+      location: "Rosario, Santa Fe",
+      description:
+        "Solución fintech que automatiza procesos financieros para PyMEs, facilitando el acceso a créditos y gestión de cash flow.",
+      marketType: "Fintech",
+      marketIcon: "Fintech",
+      typeName: "SaaS",
+      typeIcon: "rocket",
+      investmentSerie: "Series A",
+      investmentIcon: "trendingUp",
+      socialWeb: "https://finflow.com.br",
+      socialLinkedin: "https://linkedin.com/company/finflow",
+      socialTwitter: "https://twitter.com/finflow",
+      founders: [
+        {
+          name: "Pedro Silva",
+          image: "https://randomuser.me/api/portraits/men/2.jpg",
+          linkFounder: "https://twitter.com/psilva",
+        },
+        {
+          name: "Random User 2",
+          image: "https://randomuser.me/api/portraits/men/12.jpg",
+          linkFounder: "https://twitter.com/randomuser2",
+        },
+      ],
+    },
+    {
+      name: "EcoTrack",
+      logosrc: "3.png",
+      location: "Buenos Aires, Caba",
+      description:
+        "Plataforma IoT para monitoreo y optimización de consumo energético en industrias, promoviendo la sostenibilidad.",
+      marketType: "CleanTech",
+      marketIcon: "Greentech",
+      typeName: "Hardware + SaaS",
+      typeIcon: "cpu",
+      investmentSerie: "Seed",
+      investmentIcon: "seedling",
+      socialWeb: "https://ecotrack.cl",
+      socialLinkedin: "https://linkedin.com/company/ecotrack",
+      socialTwitter: "https://twitter.com/ecotrack",
+      founders: [
+        {
+          name: "Carolina Rojas",
+          image: "https://randomuser.me/api/portraits/women/2.jpg",
+          linkFounder: "https://twitter.com/crojas",
+        },
+        {
+          name: "Diego Mendoza",
+          image: "https://randomuser.me/api/portraits/men/3.jpg",
+          linkFounder: "https://twitter.com/dmendoza",
+        },
+        {
+          name: "Random User 3",
+          image: "https://randomuser.me/api/portraits/women/11.jpg",
+          linkFounder: "https://twitter.com/randomuser3",
+        },
+      ],
+    },
+    {
+      name: "HealthAI",
+      logosrc: "4.png",
+      location: "Cordoba,Cordoba",
+      description:
+        "Sistema de diagnóstico médico asistido por IA, mejorando la precisión y velocidad en la detección de enfermedades.",
+      marketType: "HealthTech",
+      marketIcon: "Healthtech",
+      typeName: "AI/ML",
+      typeIcon: "brain",
+      investmentSerie: "Series A",
+      investmentIcon: "trendingUp",
+      socialWeb: "https://healthai.mx",
+      socialLinkedin: "https://linkedin.com/company/healthai",
+      socialTwitter: "https://twitter.com/healthai",
+      founders: [
+        {
+          name: "Roberto Sánchez",
+          image: "https://randomuser.me/api/portraits/men/4.jpg",
+          linkFounder: "https://twitter.com/rsanchez",
+        },
+        {
+          name: "Random User 4",
+          image: "https://randomuser.me/api/portraits/women/12.jpg",
+          linkFounder: "https://twitter.com/randomuser4",
+        },
+      ],
+    },
+    {
+      name: "AgroSmart",
+      logosrc: "5.png",
+      location: "Carlos Paz, Cordoba",
+      description:
+        "Solución integral de agricultura de precisión que utiliza drones y sensores para optimizar cultivos.",
+      marketType: "AgroTech",
+      marketIcon: "AgriTech",
+      typeName: "Hardware + SaaS",
+      typeIcon: "cpu",
+      investmentSerie: "Series B",
+      investmentIcon: "trending",
+      socialWeb: "https://agrosmart.co",
+      socialLinkedin: "https://linkedin.com/company/agrosmart",
+      socialTwitter: "https://twitter.com/agrosmart",
+      founders: [
+        {
+          name: "María Fernández",
+          image: "https://randomuser.me/api/portraits/women/3.jpg",
+          linkFounder: "https://twitter.com/mfernandez",
+        },
+        {
+          name: "Juan Pablo Restrepo",
+          image: "https://randomuser.me/api/portraits/men/5.jpg",
+          linkFounder: "https://twitter.com/jprestrepo",
+        },
+        {
+          name: "Random User 5",
+          image: "https://randomuser.me/api/portraits/men/13.jpg",
+          linkFounder: "https://twitter.com/randomuser5",
+        },
+      ],
+    },
+    {
+      name: "LogisticsPro",
+      logosrc: "6.png",
+      location: "La Rioja",
+      description:
+        "Plataforma que optimiza rutas de entrega y gestión de flotas para empresas de logística en tiempo real.",
+      marketType: "LogisticsTech",
+      marketIcon: "Mobility",
+      typeName: "SaaS",
+      typeIcon: "rocket",
+      investmentSerie: "Seed",
+      investmentIcon: "seedling",
+      socialWeb: "https://logisticspro.pe",
+      socialLinkedin: "https://linkedin.com/company/logisticspro",
+      socialTwitter: "https://twitter.com/logisticspro",
+      founders: [
+        {
+          name: "Carlos Rodriguez",
+          image: "https://randomuser.me/api/portraits/men/6.jpg",
+          linkFounder: "https://twitter.com/crodriguez",
+        },
+        {
+          name: "Random User 6",
+          image: "https://randomuser.me/api/portraits/women/13.jpg",
+          linkFounder: "https://twitter.com/randomuser6",
+        },
+      ],
+    },
+    {
+      name: "EduTech",
+      logosrc: "7.png",
+      location: "Buenos Aires, Argentina",
+      description:
+        "Plataforma educativa que personaliza el aprendizaje mediante IA, adaptándose al ritmo de cada estudiante.",
+      marketType: "EdTech",
+      marketIcon: "EdTech",
+      typeName: "AI/ML",
+      typeIcon: "brain",
+      investmentSerie: "Series A",
+      investmentIcon: "trendingUp",
+      socialWeb: "https://edutech.ar",
+      socialLinkedin: "https://linkedin.com/company/edutech",
+      socialTwitter: "https://twitter.com/edutech",
+      founders: [
+        {
+          name: "Laura González",
+          image: "https://randomuser.me/api/portraits/women/4.jpg",
+          linkFounder: "https://twitter.com/lgonzalez",
+        },
+        {
+          name: "Martín Pérez",
+          image: "https://randomuser.me/api/portraits/men/7.jpg",
+          linkFounder: "https://twitter.com/mperez",
+        },
+        {
+          name: "Random User 7",
+          image: "https://randomuser.me/api/portraits/men/14.jpg",
+          linkFounder: "https://twitter.com/randomuser7",
+        },
+      ],
+    },
+    {
+      name: "CyberShield",
+      logosrc: "8.png",
+      location: "Buenos Aires, Argentina",
+      description:
+        "Solución de ciberseguridad que protege PyMEs de ataques mediante IA y automatización.",
+      marketType: "CyberSecurity",
+      marketIcon: "CyberSecurity",
+      typeName: "SaaS",
+      typeIcon: "rocket",
+      investmentSerie: "Seed",
+      investmentIcon: "seedling",
+      socialWeb: "https://cybershield.uy",
+      socialLinkedin: "https://linkedin.com/company/cybershield",
+      socialTwitter: "https://twitter.com/cybershield",
+      founders: [
+        {
+          name: "Andrés Silva",
+          image: "https://randomuser.me/api/portraits/men/8.jpg",
+          linkFounder: "https://twitter.com/asilva",
+        },
+        {
+          name: "Random User 8",
+          image: "https://randomuser.me/api/portraits/women/14.jpg",
+          linkFounder: "https://twitter.com/randomuser8",
+        },
+      ],
+    },
+    {
+      name: "RealState AI",
+      logosrc: "9.png",
+      location: "Buenos Aires, Argentina",
+      description:
+        "Plataforma que usa IA para valoración de propiedades y análisis predictivo del mercado inmobiliario.",
+      marketType: "PropTech",
+      marketIcon: "PropTech",
+      typeName: "AI/ML",
+      typeIcon: "brain",
+      investmentSerie: "Series B",
+      investmentIcon: "trending",
+      socialWeb: "https://realstateai.mx",
+      socialLinkedin: "https://linkedin.com/company/realstateai",
+      socialTwitter: "https://twitter.com/realstateai",
+      founders: [
+        {
+          name: "Sofia Ramírez",
+          image: "https://randomuser.me/api/portraits/women/5.jpg",
+          linkFounder: "https://twitter.com/sramirez",
+        },
+        {
+          name: "Gabriel Torres",
+          image: "https://randomuser.me/api/portraits/men/9.jpg",
+          linkFounder: "https://twitter.com/gtorres",
+        },
+        {
+          name: "Random User 9",
+          image: "https://randomuser.me/api/portraits/women/15.jpg",
+          linkFounder: "https://twitter.com/randomuser9",
+        },
+      ],
+    },
+    {
+      name: "BlockPay",
+      logosrc: "10.png",
+      location: "Buenos Aires, Argentina",
+      description:
+        "Solución de pagos basada en blockchain que facilita transacciones internacionales para empresas.",
+      marketType: "Blockchain",
+      marketIcon: "AIData",
+      typeName: "DeFi",
+      typeIcon: "link",
+      investmentSerie: "Series A",
+      investmentIcon: "trendingUp",
+      socialWeb: "https://blockpay.com.br",
+      socialLinkedin: "https://linkedin.com/company/blockpay",
+      socialTwitter: "https://twitter.com/blockpay",
+      founders: [
+        {
+          name: "Rafael Costa",
+          image: "https://randomuser.me/api/portraits/men/10.jpg",
+          linkFounder: "https://twitter.com/rcosta",
+        },
+        {
+          name: "Random User 10",
+          image: "https://randomuser.me/api/portraits/women/16.jpg",
+          linkFounder: "https://twitter.com/randomuser10",
+        },
+      ],
+    },
   ],
-  founder: [
-    {
-      name: "Founder 1",
-      image: "founder1.jpg",
-    },
-    {
-      name: "Founder 2",
-      image: "founder2.jpg",
-    },
-    {
-      name: "Founder 3",
-      image: "founder3.jpg",
-    }
-  ]
 };
 
-
- export const persons = [
+export const persons = [
   {
     name: "John Doe",
     role: "CEO",
     image: "https://example.com/john.jpg",
     startup: "Fintech Innovators",
     Linkedin: "https://linkedin.com/in/johndoe",
-    Twitter: "https://twitter.com/johndoe"
+    Twitter: "https://twitter.com/johndoe",
   },
   {
     name: "Jane Smith",
@@ -48,7 +323,7 @@ export const initialData = {
     image: "https://example.com/jane.jpg",
     startup: "HealthTech Solutions",
     Linkedin: "https://linkedin.com/in/janesmith",
-    Twitter: "https://twitter.com/janesmith"
+    Twitter: "https://twitter.com/janesmith",
   },
   {
     name: "Emily Brown",
@@ -56,7 +331,7 @@ export const initialData = {
     image: "https://example.com/emily.jpg",
     startup: "AgriTech Innovations",
     Linkedin: "https://linkedin.com/in/emilybrown",
-    Twitter: "https://twitter.com/emilybrown"
+    Twitter: "https://twitter.com/emilybrown",
   },
   {
     name: "Michael Johnson",
@@ -64,8 +339,8 @@ export const initialData = {
     image: "https://example.com/michael.jpg",
     startup: "E-commerce Hub",
     Linkedin: "https://linkedin.com/in/michaeljohnson",
-    Twitter: "https://twitter.com/michaeljohnson"
-  }
+    Twitter: "https://twitter.com/michaeljohnson",
+  },
 ];
 
 export const ventures = [
@@ -75,7 +350,7 @@ export const ventures = [
     location: "San Francisco, CA",
     investmentStages: ["Seed", "Series A", "Series B"],
     sectors: ["Fintech", "AI & Data", "Cybersecurity"],
-    website: "https://techventures.com"
+    website: "https://techventures.com",
   },
   {
     name: "Health Innovators",
@@ -83,7 +358,7 @@ export const ventures = [
     location: "New York, NY",
     investmentStages: ["Series A", "Series B"],
     sectors: ["Healthtech", "Greentech"],
-    website: "https://healthinnovators.com"
+    website: "https://healthinnovators.com",
   },
   {
     name: "AgriTech Capital",
@@ -91,7 +366,7 @@ export const ventures = [
     location: "Chicago, IL",
     investmentStages: ["Seed", "Series A"],
     sectors: ["AgriTech", "Sustainability"],
-    website: "https://agritechcapital.com"
+    website: "https://agritechcapital.com",
   },
   {
     name: "Retail Ventures",
@@ -99,6 +374,6 @@ export const ventures = [
     location: "Los Angeles, CA",
     investmentStages: ["Series B", "Growth"],
     sectors: ["E-commerce", "Retail"],
-    website: "https://retailventures.com"
-  }
+    website: "https://retailventures.com",
+  },
 ];

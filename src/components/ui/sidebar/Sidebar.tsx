@@ -73,7 +73,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   Startups
                 </Button>
               </Link>
-              <Link href="/founders">
+              <Link href="/builders">
                 <Button
                   variant={pathname === "/founders" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
@@ -129,7 +129,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
             <div className="flex flex-col gap-2 p-2">
               <Link href="/favorites">
                 <Button
-                  variant={pathname === "/shop" ? "link" : "ghost"}
+                  variant={pathname === "/favorites" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
                 >
                   <Heart className="h-4 w-4" />
@@ -138,7 +138,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
               </Link>
               <Link href="/aracc">
                 <Button
-                  variant={pathname === "/shop" ? "link" : "ghost"}
+                  variant={pathname === "/aracc" ? "link" : "ghost"}
                   className="w-full justify-start gap-2"
                 >
                   <NotebookText className="h-4 w-4" />
@@ -149,7 +149,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
           </div>
 
           <div className="sticky bottom-0 bg-white border-t p-4">
-            <Link href="www.wa.me/+543834293512" target="_blank">
+            <Link href={"wa.me/+543834293512"} target="_blank">
               <Button
                 className="w-full gap-2 hover:bg-blue-400 hover:transition-all hover:text-white"
                 variant="outline"
@@ -161,6 +161,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </aside>
+
     </>
   );
 };

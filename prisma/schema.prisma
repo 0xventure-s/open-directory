@@ -8,14 +8,14 @@ datasource db {
 }
 
 model Startup {
-  id              String   @id @unique @default(uuid())
+  id              String    @id @unique @default(uuid())
   name            String
   logosrc         String
   location        String
   description     String
   marketType      String
   marketIcon      String
-  typeName        String 
+  typeName        String
   typeIcon        String
   investmentSerie String?
   investmentIcon  String?
@@ -26,21 +26,22 @@ model Startup {
 }
 
 model Founder {
-  id        String  @id @unique @default(uuid())
-  name      String
-  image     String
-  startupId String
-  startup   Startup @relation(fields: [startupId], references: [id])
+  id          String  @id @unique @default(uuid())
+  name        String
+  image       String
+  linkFounder String
+  startupId   String
+  startup     Startup @relation(fields: [startupId], references: [id])
 }
 
 model Person {
-  id        String  @id @unique @default(uuid())
-  name      String
-  role      String
-  image     String
-  startup   String
-  Linkedin  String
-  Twitter   String
+  id       String @id @unique @default(uuid())
+  name     String
+  role     String
+  image    String
+  startup  String
+  Linkedin String
+  Twitter  String
 }
 
 model Venture {
