@@ -36,8 +36,7 @@ async function main() {
         }
       });
       console.log(`Created startup: ${startup.name} with ${startup.founders.length} founders`);
-      console.log({founders})
-      console.log(startup.founders.map((founder) => founder.linkFounder))
+     
     }
 
     // Crear persons (asegúrate de que el array 'persons' está definido)
