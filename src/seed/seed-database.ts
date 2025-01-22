@@ -4,11 +4,12 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+// seed.ts
 async function main() {
   console.log('Start seeding...');
 
   try {
-    // Limpiar base de datos (en orden correcto por las relaciones)
+    // Limpiar base de datos
     await prisma.founder.deleteMany();
     await prisma.startup.deleteMany();
     await prisma.person.deleteMany();
@@ -22,21 +23,31 @@ async function main() {
       
       const startup = await prisma.startup.create({
         data: {
-          ...startupFields,
+          // Mapeo explícito de campos requeridos
+          name: startupFields.name,
+          logosrc: startupFields.logosrc,
+          location: startupFields.location,
+          description: startupFields.description,
+          marketType: startupFields.marketType,
+          marketIcon: startupFields.marketIcon,
+          typeName: startupFields.typeName,  // Campo requerido
+          typeIcon: startupFields.typeIcon,
+          investmentSerie: startupFields.investmentSerie,
+          investmentIcon: startupFields.investmentIcon,
+          socialWeb: startupFields.socialWeb,
+          socialLinkedin: startupFields.socialLinkedin,
+          socialTwitter: startupFields.socialTwitter,
+          // Relación con founders
           founders: {
             create: founders.map(f => ({
               name: f.name,
               image: f.image,
-              linkFounder: f.linkFounder // Asegúrate de que el campo existe en tu schema.prisma
+              linkFounder: f.linkFounder
             }))
           }
-        },
-        include: {
-          founders: true // Incluir relaciones si necesitas debuggear
         }
       });
-      console.log(`Created startup: ${startup.name} with ${startup.founders.length} founders`);
-     
+      console.log(`Created startup: ${startup.name}`);
     }
 
     // Crear persons (asegúrate de que el array 'persons' está definido)

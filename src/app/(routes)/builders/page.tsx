@@ -1,25 +1,40 @@
+// app/builders/page.tsx
 import { getPersons } from "@/actions/startups";
 import { Button } from "@/components/ui/button";
+import { FilterBarBuilders } from "@/components/ui/filterBar/FilterBarBuilders";
 import FounderGrid from "@/components/ui/gridElements/FoundersGrid";
-
 import Link from "next/link";
 
-export default async function StartupPage() {
-  const person = await getPersons();
+export default async function BuildersPage({
+  searchParams,
+}: {
+  searchParams?: { role?: string | string[] }
+}) {
+  // Normalizar los roles a un array
+  const roles = Array.isArray(searchParams?.role) 
+    ? searchParams.role 
+    : searchParams?.role 
+      ? [searchParams.role] 
+      : [];
+
+  const persons = await getPersons({ roles });
+
   return (
     <div>
       <main className="flex-1 p-6 overflow-y-auto">
         <div className="space-y-12">
-          {/* Startups Preview */}
           <section>
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold">Builders Destacadas</h2>
+              <h2 className="text-2xl font-bold">Builders Destacados</h2>
               <Button variant="outline" className="border-blue-200" asChild>
                 <Link href="https://www.google.com">+ Agregar Builders</Link>
               </Button>
             </div>
-            <div>
-              <FounderGrid person={person} />
+            
+            <FilterBarBuilders />
+            
+            <div className="mt-4">
+              <FounderGrid person={persons} />
             </div>
           </section>
         </div>

@@ -3,22 +3,45 @@
 import { prisma } from "@/lib/prisma";
 import { Startup, Persons, Ventures, Founder } from "@/interface";
 
-export async function getStartups(): Promise<Startup[]> {
-  const startups = await prisma.startup.findMany({
-    include: {
-      founders: {
-        select: {
-          id: true,
-          name: true,
-          image: true,
-          linkFounder: true, // Selección explícita
-          startupId: true,
+interface StartupFilters {
+  marketType?: string | string[];
+}
+
+export async function getStartups(
+  filters?: StartupFilters
+): Promise<Startup[]> {
+  try {
+    const startups = await prisma.startup.findMany({
+      where: {
+        marketType: filters?.marketType
+          ? {
+              in: Array.isArray(filters.marketType)
+                ? filters.marketType
+                : [filters.marketType],
+            }
+          : undefined,
+      },
+      include: {
+        founders: {
+          select: {
+            id: true,
+            name: true,
+            image: true,
+            linkFounder: true,
+            startupId: true,
+          },
         },
       },
-    },
-  });
+      orderBy: {
+        name: "asc", // Orden alfabético por defecto
+      },
+    });
 
-  return startups;
+    return startups;
+  } catch (error) {
+    console.error("Error fetching startups:", error);
+    throw new Error("Error al obtener las startups");
+  }
 }
 
 export async function getFounders(): Promise<Founder[]> {
@@ -29,7 +52,6 @@ export async function getFounders(): Promise<Founder[]> {
           id: true,
           name: true,
           logosrc: true,
-          // Agrega otros campos necesarios
         },
       },
     },
@@ -38,12 +60,15 @@ export async function getFounders(): Promise<Founder[]> {
   return founders;
 }
 
-export async function getPersons(): Promise<Persons[]> {
-  const persons = await prisma.person.findMany();
-
-  return persons;
+export async function getPersons(filters?: {
+  roles?: string[];
+}): Promise<Persons[]> {
+  return await prisma.person.findMany({
+    where: {
+      role: filters?.roles?.length ? { in: filters.roles } : undefined,
+    },
+  });
 }
-
 export async function getVentures(): Promise<Ventures[]> {
   const ventures = await prisma.venture.findMany();
 

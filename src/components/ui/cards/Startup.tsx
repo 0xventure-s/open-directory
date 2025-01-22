@@ -12,7 +12,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Heart,
   Globe,
-  TrendingUp,
   Rocket,
   Twitter,
   MapPin,
@@ -28,6 +27,10 @@ import {
   Tractor,
   Cpu,
   Ticket,
+  Server,
+  WebhookIcon,
+  Pizza,
+  Move,
 } from "lucide-react";
 import { Startup } from "@/interface";
 import Link from "next/link";
@@ -36,23 +39,26 @@ import { useFavoriteStore } from "@/store/favoritesStore";
 
 const iconMapping: Record<string, React.ReactNode> = {
   Fintech: <Globe className="mr-1 h-3 w-3 text-blue-500" />,
-  Healthtech: <Heart className="mr-1 h-3 w-3 text-red-500" />,
-  Edtech: <Book className="mr-1 h-3 w-3 text-yellow-500" />,
+  HealthTech: <Heart className="mr-1 h-3 w-3 text-red-500" />,
+  EdTech: <Book className="mr-1 h-3 w-3 text-yellow-500" />,
   Ecommerce: <ShoppingCart className="mr-1 h-3 w-3 text-green-500" />,
   Greentech: <Leaf className="mr-1 h-3 w-3 text-green-400" />,
-  Mobility: <Car className="mr-1 h-3 w-3 text-gray-500" />,
-  AIData: <Cpu className="mr-1 h-3 w-3 text-indigo-500" />,
+  LogisticsTech: <Car className="mr-1 h-3 w-3 text-gray-500" />,
+  Blockchain: <Cpu className="mr-1 h-3 w-3 text-indigo-500" />,
   PropTech: <Home className="mr-1 h-3 w-3 text-orange-500" />,
   MediaTech: <Camera className="mr-1 h-3 w-3 text-purple-500" />,
-  Cybersecurity: <Shield className="mr-1 h-3 w-3 text-teal-500" />,
+  CyberSecurity: <Shield className="mr-1 h-3 w-3 text-teal-500" />,
   TicketTech: <Ticket className="mr-1 h-3 w-3 text-pink-500" />,
   CommunityTech: <Users className="mr-1 h-3 w-3 text-blue-400" />,
-  Technologie: <Settings className="mr-1 h-3 w-3 text-gray-400" />,
-  AgriTech: <Tractor className="mr-1 h-3 w-3 text-brown-500" />,
-  rocket: <Rocket className="mr-1 h-3 w-3 text-yellow-400" />,
-  trendingUp: <TrendingUp className="mr-1 h-3 w-3 text-green-600" />,
+  Technology: <Settings className="mr-1 h-3 w-3 text-gray-400" />,
+  AgroTech: <Tractor className="mr-1 h-3 w-3 text-amber-700" />,
+  SaaS: <Rocket className="mr-1 h-3 w-3 text-yellow-400" />,
+  "AI/ML": <Server className="mr-1 h-3 w-3 text-green-600" />,
+  "Hardware + SaaS": <Camera className="mr-1 h-3 w-3 text-purple-500" />,
+  Mobility: <Move className="mr-1 h-3 w-3 text-gray-400" />,
+  InfrastructureTech: <WebhookIcon className="mr-1 h-3 w-3 text-blue-500" />,
+  FoodTech: <Pizza className="mr-1 h-3 w-3 text-red-400" />,
 };
-
 interface Props {
   startup: Startup;
 }
@@ -99,9 +105,11 @@ export default function StartupCard({ startup }: Props) {
             {startup.marketType}
           </Badge>
           <Badge variant="secondary">{startup.typeName}</Badge>
-          <Badge className="bg-emerald-500/10 text-emerald-500">
-            {iconMapping[startup.investmentIcon!]} {startup.investmentSerie}
-          </Badge>
+          {startup.investmentIcon && (
+            <Badge className="bg-emerald-500/10 text-emerald-500">
+              {iconMapping[startup.investmentIcon!]} {startup.investmentSerie}
+            </Badge>
+          )}
         </div>
         <div className="flex -space-x-1 pt-2">
           {startup.founders.map((founder, i) => (

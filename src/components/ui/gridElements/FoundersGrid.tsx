@@ -9,7 +9,7 @@ interface Props {
 
 export default function FounderGrid({person}:Props) {
   return (
-    <div  className="grid gap-6 md:grid-cols-2 lg:flex flex-row grid-cols-1">
+    <div  className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 grid-cols-1">
       {person.map((person) => (
         <FounderCard key={person.image} person={person}/>
       ) )}

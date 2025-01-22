@@ -12,7 +12,7 @@ export default function ResourcesPage() {
       </div>
 
       <Tabs defaultValue="images" className="space-y-4">
-      <TabsList className="grid grid-cols-4 gap-4 w-full md:w-fit ">
+      <TabsList className="grid grid-cols-3 gap-4 w-full md:w-fit ">
   <TabsTrigger value="images" className="flex items-center gap-2">
     <ImagesIcon className="h-4 w-4 text-foreground" />
     Fondos
@@ -25,10 +25,7 @@ export default function ResourcesPage() {
     <LinkIcon className="h-4 w-4 text-foreground z-10" />
     Links
   </TabsTrigger>
-  <TabsTrigger value="downloads" className="flex items-center gap-2">
-    <Download className="h-4 w-4 text-foreground z-10" />
-    Descargas
-  </TabsTrigger>
+ 
 </TabsList>
 
         <TabsContent value="images" className="grid gap-4 md:grid-cols-3">

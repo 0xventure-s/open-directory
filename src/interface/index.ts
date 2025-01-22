@@ -16,7 +16,9 @@ export interface Startup {
   founders: Founder[];
 }
 
-
+export interface StartupFilters {
+  marketType?: string[];
+}
 
 export interface Founder {
   id: string;

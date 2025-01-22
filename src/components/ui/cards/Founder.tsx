@@ -20,7 +20,7 @@ interface Props {
 
 export default function FounderCard({ person }: Props) {
   return (
-    <Card className="w-full sm:w-1/2">
+    <Card className="w-full ">
       <CardHeader className="flex flex-row items-center gap-3 p-4">
         <Avatar className="h-12 w-12">
           <AvatarImage src={person.image} alt={person.name} />
@@ -40,10 +40,8 @@ export default function FounderCard({ person }: Props) {
         </div>
       </CardHeader>
 
-      <CardContent className="space-y-2 px-4 pb-2">
+      <CardContent className="space-y-1 px-4 pb-1">
         <p className="text-xs text-muted-foreground">{person.role}</p>
-
-       
       </CardContent>
 
       <CardFooter className="flex justify-end p-2 gap-2">

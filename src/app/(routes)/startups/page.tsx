@@ -1,13 +1,24 @@
 import { getStartups } from "@/actions/startups";
 import { Button } from "@/components/ui/button";
-
+import { FilterBar } from "@/components/ui/filterBar/Filters";
 import StartupGrid from "@/components/ui/gridElements/StartupGrid";
-
 import { Startup } from "@/interface";
 import Link from "next/link";
 
-export default async function StartupPage() {
-  const startups: Startup[] = await getStartups();
+
+export default async function StartupPage({
+  searchParams,
+}: {
+  searchParams?: { marketType?: string | string[] };
+}) {
+  // Convertir a array si es necesario
+  const marketTypes = Array.isArray(searchParams?.marketType)
+    ? searchParams.marketType
+    : searchParams?.marketType
+    ? [searchParams.marketType]
+    : undefined;
+
+  const startups: Startup[] = await getStartups({ marketType: marketTypes });
 
   return (
     <main className="flex-1 p-4 overflow-y-auto md:p-6 lg:p-8">
@@ -22,9 +33,19 @@ export default async function StartupPage() {
             </Button>
           </div>
 
-          <div className="mt-4">
-            <StartupGrid startups={startups} />
-          </div>
+          {/* Componente de Filtros */}
+          <FilterBar />
+
+          {/* Resultados y manejo de estado vacío */}
+          {startups.length > 0 ? (
+            <div className="mt-4">
+              <StartupGrid startups={startups} />
+            </div>
+          ) : (
+            <div className="mt-8 text-center text-muted-foreground">
+              No se encontraron startups con los filtros seleccionados
+            </div>
+          )}
         </section>
       </div>
     </main>
