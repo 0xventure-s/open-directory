@@ -5,17 +5,19 @@ import StartupGrid from "@/components/ui/gridElements/StartupGrid";
 import { Startup } from "@/interface";
 import Link from "next/link";
 
-
 export default async function StartupPage({
   searchParams,
 }: {
-  searchParams?: { marketType?: string | string[] };
+  searchParams: { marketType?: string | string[] }; // Tipado explícito
 }) {
+  // Resolvemos searchParams como promesa
+  const params = await searchParams;
+  
   // Convertir a array si es necesario
-  const marketTypes = Array.isArray(searchParams?.marketType)
-    ? searchParams.marketType
-    : searchParams?.marketType
-    ? [searchParams.marketType]
+  const marketTypes = Array.isArray(params?.marketType)
+    ? params.marketType
+    : params?.marketType
+    ? [params.marketType]
     : undefined;
 
   const startups: Startup[] = await getStartups({ marketType: marketTypes });
@@ -33,10 +35,8 @@ export default async function StartupPage({
             </Button>
           </div>
 
-          {/* Componente de Filtros */}
           <FilterBar />
 
-          {/* Resultados y manejo de estado vacío */}
           {startups.length > 0 ? (
             <div className="mt-4">
               <StartupGrid startups={startups} />

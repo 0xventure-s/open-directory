@@ -8,13 +8,16 @@ import Link from "next/link";
 export default async function BuildersPage({
   searchParams,
 }: {
-  searchParams?: { role?: string | string[] }
+  searchParams?: { role?: string | string[] };
 }) {
+  // Resolvemos los searchParams como promesa
+  const params = await searchParams;
+  
   // Normalizar los roles a un array
-  const roles = Array.isArray(searchParams?.role) 
-    ? searchParams.role 
-    : searchParams?.role 
-      ? [searchParams.role] 
+  const roles = Array.isArray(params?.role) 
+    ? params.role 
+    : params?.role 
+      ? [params.role] 
       : [];
 
   const persons = await getPersons({ roles });
