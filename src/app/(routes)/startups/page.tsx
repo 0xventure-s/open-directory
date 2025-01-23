@@ -5,12 +5,15 @@ import StartupGrid from "@/components/ui/gridElements/StartupGrid";
 import { Startup } from "@/interface";
 import Link from "next/link";
 
-export default async function StartupPage({
-  searchParams,
-}: {
-  searchParams: { marketType?: string | string[] }; // Tipado explícito
-}) {
-  // Resolvemos searchParams como promesa
+// Definir tipo para las props
+interface StartupPageProps {
+  searchParams: Promise<{
+    marketType?: string | string[];
+  }>;
+}
+
+export default async function StartupPage({ searchParams }: StartupPageProps) {
+  // Resolver la promesa de searchParams
   const params = await searchParams;
   
   // Convertir a array si es necesario
@@ -51,3 +54,6 @@ export default async function StartupPage({
     </main>
   );
 }
+
+// Opcional: Forzar renderizado dinámico si es necesario
+export const dynamic = 'force-dynamic';

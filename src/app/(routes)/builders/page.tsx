@@ -5,12 +5,15 @@ import { FilterBarBuilders } from "@/components/ui/filterBar/FilterBarBuilders";
 import FounderGrid from "@/components/ui/gridElements/FoundersGrid";
 import Link from "next/link";
 
-export default async function BuildersPage({
-  searchParams,
-}: {
-  searchParams?: { role?: string | string[] };
-}) {
-  // Resolvemos los searchParams como promesa
+// Tipo para los searchParams
+interface BuildersPageProps {
+  searchParams: Promise<{
+    role?: string | string[];
+  }>;
+}
+
+export default async function BuildersPage({ searchParams }: BuildersPageProps) {
+  // Resolver la promesa de searchParams
   const params = await searchParams;
   
   // Normalizar los roles a un array
