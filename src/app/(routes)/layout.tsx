@@ -16,7 +16,7 @@ export default function NewLayout({ children }: { children: React.ReactNode }) {
         onClose={() => setIsSidebarOpen(false)}
       />
       <div className="flex-1 flex flex-col md:ml-64">
-        <header className="sticky top-0 z-20 bg-white border-b p-4 flex items-center">
+        <header className="sticky top-0 z-20 bg-white border-b sm:border-hidden p-4 flex items-center">
           <Button
             variant="ghost"
             className="md:hidden mr-2"
@@ -25,7 +25,7 @@ export default function NewLayout({ children }: { children: React.ReactNode }) {
             <Menu className="h-6 w-6" />
           </Button>
           <div className="flex justify-center w-[290px]">
-          <Image src={"/arbanner.png"} height={180} width={180} alt="Logo"/>
+          <Image src={"/arbanner.png"} height={180} width={180} alt="Logo" className="sm:hidden"/>
           </div>
         </header>
         {children}

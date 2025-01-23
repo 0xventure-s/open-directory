@@ -26,7 +26,7 @@ export default function MainLayout({
             <Menu className="h-6 w-6" />
           </Button>
           <div className="flex justify-center w-[290px]">
-            <Image src={"/arbanner.png"} height={180} width={180} alt="Logo" />
+            <Image src={"/arbanner.png"} height={180} width={180} alt="Logo"  className="sm:hidden"/>
           </div>
         </header>
         <main className="flex-1 p-6 overflow-y-auto">{children}</main>
