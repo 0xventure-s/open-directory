@@ -2,6 +2,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { Startup, Persons, Ventures, Founder } from "@/interface";
+import { unstable_noStore as noStore } from 'next/cache';
 
 interface StartupFilters {
   marketType?: string | string[];
@@ -44,6 +45,40 @@ export async function getStartups(
   }
 }
 
+
+
+
+export async function getFreshRandomStartups(limit: number = 3) {
+  // 1. Desactivar TODOS los cachés de Next.js
+  noStore();
+
+  // 2. Obtener total de startups (siempre fresco)
+  const totalStartups = await prisma.startup.count();
+
+  // 3. Calcular salto aleatorio dinámico
+  const skip = Math.floor(Math.random() * Math.max(0, totalStartups - limit));
+
+  // 4. Query con resultados no cacheados
+  return prisma.startup.findMany({
+    include: {
+      founders: {
+        select: {
+          id: true,
+          name: true,
+          image: true,
+          linkFounder: true,
+          startupId: true,
+        },
+      },
+    },
+    take: limit,
+    skip, 
+  });
+}
+
+
+
+
 export async function getFounders(): Promise<Founder[]> {
   const founders = await prisma.founder.findMany({
     include: {
@@ -69,38 +104,50 @@ export async function getPersons(filters?: {
     },
   });
 }
+
+
+
+
+
+export async function getRandomPeople(limit: number = 3) {
+  noStore();
+
+  const total = await prisma.person.count();
+  const skip = Math.floor(Math.random() * Math.max(0, total - limit));
+
+  return prisma.person.findMany({
+    orderBy: { id: 'asc' },
+    take: limit,
+    skip: skip,
+  });
+}
+
+
+
 export async function getVentures(): Promise<Ventures[]> {
   const ventures = await prisma.venture.findMany();
 
   return ventures;
 }
 
-// Función para obtener un startup específico por ID
-export async function getStartupById(id: string): Promise<Startup | null> {
-  const startup = await prisma.startup.findUnique({
-    where: { id },
-    include: {
-      founders: true,
-    },
-  });
 
-  return startup;
+export async function getRandomVentures(limit: number = 3) {
+  noStore();
+
+  const totalVentures = await prisma.venture.count();
+
+  const skip = Math.floor(
+    Math.random() * Math.max(0, totalVentures - limit)
+  );
+  return prisma.venture.findMany({
+    take: limit,
+    skip,
+ 
+  });
 }
 
-// Función para obtener una persona específica por ID
-export async function getPersonById(id: string): Promise<Persons | null> {
-  const person = await prisma.person.findUnique({
-    where: { id },
-  });
 
-  return person;
-}
 
-// Función para obtener un venture específico por ID
-export async function getVentureById(id: string): Promise<Ventures | null> {
-  const venture = await prisma.venture.findUnique({
-    where: { id },
-  });
 
-  return venture;
-}
+
+
