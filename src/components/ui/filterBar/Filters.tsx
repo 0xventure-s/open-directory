@@ -15,7 +15,6 @@ import {
   Home,
   Camera,
   Shield,
-  Ticket,
   Rocket,
   Tractor,
   ChevronDown,
@@ -23,6 +22,7 @@ import {
   Server,
   WebhookIcon,
   Pizza,
+  FrameIcon,
 } from "lucide-react";
 import {
   Sheet,
@@ -40,9 +40,9 @@ interface FilterCategory {
 
 const filterCategories: FilterCategory[] = [
   {
-    icon: <Ticket className="h-3 w-3 text-pink-500" />,
-    label: "TicketTech",
-    id: "TicketTech",
+    icon: <FrameIcon className="h-3 w-3 text-pink-500" />,
+    label: "EmergingTech",
+    id: "EmergingTech",
   },
   {
     icon: <Globe className="h-3 w-3 text-blue-500" />,

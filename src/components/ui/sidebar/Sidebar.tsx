@@ -48,7 +48,12 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   height={170}
                   quality={100}
                   alt="imagen"
-                  className="mb-2"
+                  className="mb-2 object-contain w-[170px] h-auto"
+                  priority // Añadir si es imagen importante
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
               </Link>
             </div>
@@ -161,7 +166,6 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </aside>
-
     </>
   );
 };

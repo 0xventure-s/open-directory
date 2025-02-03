@@ -1,308 +1,212 @@
 export const initialData = {
   startup: [
     {
-      name: "Eventum",
-      logosrc: "1.png",
-      location: "Catamarca, Argentina",
-      description:
-        "Plataforma de ticketing digital que simplifica la venta de entradas, permitiendo a organizadores vender más en menos pasos.",
-      marketType: "TicketTech",
-      marketIcon: "TicketTech",
-      typeName: "B2C",
-      typeIcon: "rocket",
-      investmentSerie: "Seed",
-      investmentIcon: "trendingUp",
-      socialWeb: "https://eventum.com",
-      socialLinkedin: "https://linkedin.com/company/eventum",
-      socialTwitter: "https://twitter.com/eventum",
+      name: "Ascentio",
+      logosrc: "ascentio.jpeg", // Nombre en minúsculas
+      location: "Córdoba",
+      description: "Ascentio Technologies is a company dedicated to the design and construction of complex systems of technologies related to Space Engineering, Software and Hardware Development, Unified Communications Solutions over VoIP, Operation of High Availability Systems, and Renewable Energy",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
+      typeName: "B2B",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "https://www.ascentio.com.ar/en/home/",
+      socialLinkedin: "https://www.linkedin.com/company/ascentio/",
+      socialTwitter: "https://www.facebook.com/ascentio/",
       founders: [
         {
-          name: "Lucas Martinez",
-          image: "https://randomuser.me/api/portraits/men/1.jpg",
-          linkFounder: "https://twitter.com/lmartinez",
+          name: "Esteban Carranza",
+          image: "/founders/EstebanCarranza.jpeg", // Mayúsculas iniciales, sin espacios
+          linkFounder: "https://www.linkedin.com/in/esteban-carranza-93a72859/"
         },
         {
-          name: "Ana García",
-          image: "https://randomuser.me/api/portraits/women/1.jpg",
-          linkFounder: "https://twitter.com/agarcia",
-        },
-        {
-          name: "Random User 1",
-          image: "https://randomuser.me/api/portraits/men/11.jpg",
-          linkFounder: "https://twitter.com/randomuser1",
-        },
-      ],
+          name: "Javier Proyector",
+          image: "/founders/JavierProyector.jpeg",
+          linkFounder: "https://www.linkedin.com/in/javier-proyector-521bb717/"
+        }
+      ]
     },
     {
-      name: "FinFlow",
-      logosrc: "2.png",
-      location: "Rosario, Santa Fe",
-      description:
-        "Solución fintech que automatiza procesos financieros para PyMEs, facilitando el acceso a créditos y gestión de cash flow.",
-      marketType: "Fintech",
-      marketIcon: "Fintech",
+      name: "Satellogic",
+      logosrc: "satellogic.jpeg", // minúsculas
+      location: "Buenos Aires",
+      description: "Satellogic is a leading provider of high resolution satellite imagery. We drive real outcomes for our customers with daily, actionable, planetary-scale insights you can trust.",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
       typeName: "B2B",
-      typeIcon: "Fintech",
-      investmentSerie: "Series A",
-      investmentIcon: "trendingUp",
-      socialWeb: "https://finflow.com.br",
-      socialLinkedin: "https://linkedin.com/company/finflow",
-      socialTwitter: "https://twitter.com/finflow",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "https://satellogic.com/",
+      socialLinkedin: "https://www.linkedin.com/company/satellogic/",
+      socialTwitter: "https://x.com/satellogic",
       founders: [
         {
-          name: "Pedro Silva",
-          image: "https://randomuser.me/api/portraits/men/2.jpg",
-          linkFounder: "https://twitter.com/psilva",
-        },
-        {
-          name: "Random User 2",
-          image: "https://randomuser.me/api/portraits/men/12.jpg",
-          linkFounder: "https://twitter.com/randomuser2",
-        },
-      ],
+          name: "Emiliano Kargieman",
+          image: "/founders/EmilianoKargieman.jpeg", // Formato corregido
+          linkFounder: "https://www.linkedin.com/in/ekargieman/"
+        }
+      ]
     },
     {
-      name: "EcoTrack",
-      logosrc: "3.png",
-      location: "Buenos Aires, Caba",
-      description:
-        "Plataforma IoT para monitoreo y optimización de consumo energético en industrias, promoviendo la sostenibilidad.",
-      marketType: "Greentech",
-      marketIcon: "Greentech",
+      name: "Tlon space",
+      logosrc: "tlonspace.jpeg", // minúsculas sin espacios
+      location: "Buenos Aires",
+      description: "At TLON Space our vision is to push the boundaries of innovation by developing technology to contribute, advance and expand accessibility to space for the satellite industry.",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
       typeName: "B2B",
-      typeIcon: "Greentech",
-      investmentSerie: "Seed",
-      investmentIcon: "seedling",
-      socialWeb: "https://ecotrack.cl",
-      socialLinkedin: "https://linkedin.com/company/ecotrack",
-      socialTwitter: "https://twitter.com/ecotrack",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "http://www.tlon.space",
+      socialLinkedin: "https://www.linkedin.com/company/tlon-space/",
+      socialTwitter: "https://x.com/TlonSpace",
       founders: [
         {
-          name: "Carolina Rojas",
-          image: "https://randomuser.me/api/portraits/women/2.jpg",
-          linkFounder: "https://twitter.com/crojas",
+          name: "Pablo Andrés",
+          image: "/founders/PabloAndres.jpeg", // Conserva acento
+          linkFounder: "https://www.linkedin.com/in/pabloandresvic/"
         },
         {
-          name: "Diego Mendoza",
-          image: "https://randomuser.me/api/portraits/men/3.jpg",
-          linkFounder: "https://twitter.com/dmendoza",
-        },
-        {
-          name: "Random User 3",
-          image: "https://randomuser.me/api/portraits/women/11.jpg",
-          linkFounder: "https://twitter.com/randomuser3",
-        },
-      ],
+          name: "Gerardo Natale",
+          image: "/founders/GerardoNatale.jpeg",
+          linkFounder: "https://www.linkedin.com/in/gerardo-natale-5160189/"
+        }
+      ]
     },
     {
-      name: "HealthAI",
-      logosrc: "4.png",
-      location: "Cordoba,Cordoba",
-      description:
-        "Sistema de diagnóstico médico asistido por IA, mejorando la precisión y velocidad en la detección de enfermedades.",
-      marketType: "HealthTech",
-      marketIcon: "HealthTech",
+      name: "Briste",
+      logosrc: "briste.jpeg",
+      location: "Córdoba",
+      description: "Combinamos hardware y software con los últimos avances en materia tecnológica para brindar la mejor calidad en nuestros productos y servicios. Nuestros valores buscan transmitir confianza, seguridad, compañía, sustentabilidad, estabilidad y agilidad para nuestros clientes",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
       typeName: "B2B",
-      typeIcon: "HealthTech",
-      investmentSerie: "Series A",
-      investmentIcon: "trendingUp",
-      socialWeb: "https://healthai.mx",
-      socialLinkedin: "https://linkedin.com/company/healthai",
-      socialTwitter: "https://twitter.com/healthai",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "https://briste.com.ar",
+      socialLinkedin: "https://www.linkedin.com/company/briste/",
+      socialTwitter: "https://x.com/bristearg",
       founders: [
         {
-          name: "Roberto Sánchez",
-          image: "https://randomuser.me/api/portraits/men/4.jpg",
-          linkFounder: "https://twitter.com/rsanchez",
+          name: "Marcos Brizuela",
+          image: "/founders/MarcosBrizuela.jpeg",
+          linkFounder: "https://www.linkedin.com/in/marcos-brizuela-b9103111b/"
         },
         {
-          name: "Random User 4",
-          image: "https://randomuser.me/api/portraits/women/12.jpg",
-          linkFounder: "https://twitter.com/randomuser4",
-        },
-      ],
+          name: "Guillermina Lerussi",
+          image: "/founders/GuillerminaLerussi.jpeg",
+          linkFounder: "https://www.linkedin.com/in/guillermina-lerussi-38107211b/"
+        }
+      ]
     },
     {
-      name: "AgroSmart",
-      logosrc: "5.png",
-      location: "Carlos Paz, Cordoba",
-      description:
-        "Solución integral de agricultura de precisión que utiliza drones y sensores para optimizar cultivos.",
-      marketType: "AgroTech",
-      marketIcon: "AgroTech",
+      name: "Deitres",
+      logosrc: "deitres.jpeg",
+      location: "Mar del Plata",
+      description: "Deitres SA se dedican a desarrollar tecnología IOT para economías emergentes.",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
       typeName: "B2B",
-      typeIcon: "AgroTech",
-      investmentSerie: "Series B",
-      investmentIcon: "trending",
-      socialWeb: "https://agrosmart.co",
-      socialLinkedin: "https://linkedin.com/company/agrosmart",
-      socialTwitter: "https://twitter.com/agrosmart",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "https://deitres.com/en/",
+      socialLinkedin: "https://www.linkedin.com/company/deitres-s-a-/",
+      socialTwitter: "https://x.com/Deitres_SA",
       founders: [
         {
-          name: "María Fernández",
-          image: "https://randomuser.me/api/portraits/women/3.jpg",
-          linkFounder: "https://twitter.com/mfernandez",
-        },
-        {
-          name: "Juan Pablo Restrepo",
-          image: "https://randomuser.me/api/portraits/men/5.jpg",
-          linkFounder: "https://twitter.com/jprestrepo",
-        },
-        {
-          name: "Random User 5",
-          image: "https://randomuser.me/api/portraits/men/13.jpg",
-          linkFounder: "https://twitter.com/randomuser5",
-        },
-      ],
+          name: "Bernardo Martínez Sáenz",
+          image: "/founders/BernardoMartínezSaenz.jpeg", // Acentos incluidos
+          linkFounder: "https://www.linkedin.com/in/bernardo-mart%C3%ADnez-s%C3%A1enz/"
+        }
+      ]
     },
     {
-      name: "LogisticsPro",
-      logosrc: "6.png",
-      location: "La Rioja",
-      description:
-        "Plataforma que optimiza rutas de entrega y gestión de flotas para empresas de logística en tiempo real.",
-      marketType: "LogisticsTech",
-      marketIcon: "Mobility",
+      name: "Efficast",
+      logosrc: "efficast.jpeg",
+      location: "Rosario",
+      description: "Efficast ofrece un dispositivo IoT autoinstalable de última generación que se conecta a máquinas industriales, a través de sensores de vanguardia y una aplicación móvil con inteligencia artificial. Permite supervisar una industria de manera rápida y sencilla, proporcionando datos confiables en tiempo real. Suministra informes generados por inteligencia artificial Impulsado por GPT-4.",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
       typeName: "B2B",
-      typeIcon: "LogisticsTech",
-      investmentSerie: "Seed",
-      investmentIcon: "seedling",
-      socialWeb: "https://logisticspro.pe",
-      socialLinkedin: "https://linkedin.com/company/logisticspro",
-      socialTwitter: "https://twitter.com/logisticspro",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "https://efficast.ai/",
+      socialLinkedin: "https://www.linkedin.com/company/efficast/",
+      socialTwitter: "https://www.instagram.com/efficast.ai/",
       founders: [
         {
-          name: "Carlos Rodriguez",
-          image: "https://randomuser.me/api/portraits/men/6.jpg",
-          linkFounder: "https://twitter.com/crodriguez",
-        },
-        {
-          name: "Random User 6",
-          image: "https://randomuser.me/api/portraits/women/13.jpg",
-          linkFounder: "https://twitter.com/randomuser6",
-        },
-      ],
+          name: "Simón Carpman",
+          image: "/founders/SimonCarpman.jpeg", // Acento en la "o"
+          linkFounder: "https://www.linkedin.com/in/simoncarpman/"
+        }
+      ]
     },
     {
-      name: "EduTech",
-      logosrc: "7.png",
-      location: "Buenos Aires, Argentina",
-      description:
-        "Plataforma educativa que personaliza el aprendizaje mediante IA, adaptándose al ritmo de cada estudiante.",
-      marketType: "EdTech",
-      marketIcon: "Edtech",
+      name: "Sensify",
+      logosrc: "sensify.jpeg",
+      location: "Rosario",
+      description: "Plataforma IoT para evitar cortes en la cadena de frío y conectar marcas de consumo masivo de alimentos y bebidas con consumidores.",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
       typeName: "B2B",
-      typeIcon: "Edtech",
-      investmentSerie: "Series A",
-      investmentIcon: "trendingUp",
-      socialWeb: "https://edutech.ar",
-      socialLinkedin: "https://linkedin.com/company/edutech",
-      socialTwitter: "https://twitter.com/edutech",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "https://sensify.com.ar/",
+      socialLinkedin: "https://www.linkedin.com/company/sensify-iot/",
+      socialTwitter: "https://www.instagram.com/sensify.iot/",
       founders: [
         {
-          name: "Laura González",
-          image: "https://randomuser.me/api/portraits/women/4.jpg",
-          linkFounder: "https://twitter.com/lgonzalez",
+          name: "Matias Cottone",
+          image: "/founders/MatiasCottone.jpeg",
+          linkFounder: "https://www.linkedin.com/in/matias-cottone/"
         },
         {
-          name: "Martín Pérez",
-          image: "https://randomuser.me/api/portraits/men/7.jpg",
-          linkFounder: "https://twitter.com/mperez",
+          name: "Federico Harraca",
+          image: "/founders/FedericoHarraca.jpeg",
+          linkFounder: "https://www.linkedin.com/in/federico-harraca/"
         },
         {
-          name: "Random User 7",
-          image: "https://randomuser.me/api/portraits/men/14.jpg",
-          linkFounder: "https://twitter.com/randomuser7",
-        },
-      ],
+          name: "Eugenio Harraca",
+          image: "/founders/EugenioHarraca.jpeg",
+          linkFounder: "https://www.linkedin.com/in/eugenioharraca/"
+        }
+      ]
     },
     {
-      name: "CyberShield",
-      logosrc: "8.png",
-      location: "Buenos Aires, Argentina",
-      description:
-        "Solución de ciberseguridad que protege PyMEs de ataques mediante IA y automatización.",
-      marketType: "CyberSecurity",
-      marketIcon: "CyberSecurity",
+      name: "CamOnApp",
+      logosrc: "camonapp.jpeg", // minúsculas sin camelCase
+      location: "Buenos Aires",
+      description: "Creamos experiencias en Realidad Aumentada que potencian las estrategias de nuestros clientes.",
+      marketType: "EmergingTech",
+      marketIcon: "EmergingTech",
       typeName: "B2B",
-      typeIcon: "CyberSecurity",
-      socialWeb: "https://cybershield.uy",
-      socialLinkedin: "https://linkedin.com/company/cybershield",
-      socialTwitter: "https://twitter.com/cybershield",
+      typeIcon: "EmergingTech",
+      investmentSerie: null,
+      investmentIcon: null,
+      socialWeb: "http://www.camonapp.com/",
+      socialLinkedin: "https://www.linkedin.com/company/camonapp/",
+      socialTwitter: "https://x.com/camon_xr",
       founders: [
         {
-          name: "Andrés Silva",
-          image: "https://randomuser.me/api/portraits/men/8.jpg",
-          linkFounder: "https://twitter.com/asilva",
+          name: "Damian Alcala",
+          image: "/founders/DamianAlcala.jpeg",
+          linkFounder: "https://www.linkedin.com/in/damianalcala/"
         },
         {
-          name: "Random User 8",
-          image: "https://randomuser.me/api/portraits/women/14.jpg",
-          linkFounder: "https://twitter.com/randomuser8",
-        },
-      ],
-    },
-    {
-      name: "RealState AI",
-      logosrc: "9.png",
-      location: "Buenos Aires, Argentina",
-      description:
-        "Plataforma que usa IA para valoración de propiedades y análisis predictivo del mercado inmobiliario.",
-      marketType: "PropTech",
-      marketIcon: "PropTech",
-      typeName: "B2B",
-      typeIcon: "brain",
-      investmentSerie: "Series B",
-      investmentIcon: "trending",
-      socialWeb: "https://realstateai.mx",
-      socialLinkedin: "https://linkedin.com/company/realstateai",
-      socialTwitter: "https://twitter.com/realstateai",
-      founders: [
-        {
-          name: "Sofia Ramírez",
-          image: "https://randomuser.me/api/portraits/women/5.jpg",
-          linkFounder: "https://twitter.com/sramirez",
-        },
-        {
-          name: "Gabriel Torres",
-          image: "https://randomuser.me/api/portraits/men/9.jpg",
-          linkFounder: "https://twitter.com/gtorres",
-        },
-        {
-          name: "Random User 9",
-          image: "https://randomuser.me/api/portraits/women/15.jpg",
-          linkFounder: "https://twitter.com/randomuser9",
-        },
-      ],
-    },
-    {
-      name: "BlockPay",
-      logosrc: "10.png",
-      location: "Buenos Aires, Argentina",
-      description:
-        "Solución de pagos basada en blockchain que facilita transacciones internacionales para empresas.",
-      marketType: "Blockchain",
-      marketIcon: "Blockchain",
-      typeName: "B2B",
-      typeIcon: "link",
-      investmentSerie: "Series A",
-      investmentIcon: "trendingUp",
-      socialWeb: "https://blockpay.com.br",
-      socialLinkedin: "https://linkedin.com/company/blockpay",
-      socialTwitter: "https://twitter.com/blockpay",
-      founders: [
-        {
-          name: "Rafael Costa",
-          image: "https://randomuser.me/api/portraits/men/10.jpg",
-          linkFounder: "https://twitter.com/rcosta",
-        },
-        {
-          name: "Random User 10",
-          image: "https://randomuser.me/api/portraits/women/16.jpg",
-          linkFounder: "https://twitter.com/randomuser10",
-        },
-      ],
-    },
+          name: "Pepe Marriot",
+          image: "/founders/PepeMarriot.jpeg",
+          linkFounder: "https://www.linkedin.com/in/pepemarriot"
+        }
+      ]
+    }
+
   ],
 };
 
@@ -310,7 +214,7 @@ export const persons = [
   {
     name: "John Carter",
     role: "CEO",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    image: "https://randomuser.me/api/portraits/men/1.jpeg",
     startup: "Fintech Innovators",
     Linkedin: "https://linkedin.com/in/johncarter",
     Twitter: "https://twitter.com/johncarter",
@@ -318,7 +222,7 @@ export const persons = [
   {
     name: "Emma Wilson",
     role: "CTO",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    image: "https://randomuser.me/api/portraits/women/2.jpeg",
     startup: "AI Nexus",
     Linkedin: "https://linkedin.com/in/emmawilson",
     Twitter: "https://twitter.com/emmawilson",
@@ -326,7 +230,7 @@ export const persons = [
   {
     name: "Liam Nguyen",
     role: "CMO",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
+    image: "https://randomuser.me/api/portraits/men/3.jpeg",
     startup: "Growth Hackers",
     Linkedin: "https://linkedin.com/in/liamnguyen",
     Twitter: "https://twitter.com/liamnguyen",
@@ -334,7 +238,7 @@ export const persons = [
   {
     name: "Sophia Rodriguez",
     role: "Founder",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://randomuser.me/api/portraits/women/4.jpeg",
     startup: "EcoTech Solutions",
     Linkedin: "https://linkedin.com/in/sophiarod",
     Twitter: "https://twitter.com/sophiarod",
@@ -342,7 +246,7 @@ export const persons = [
   {
     name: "Noah Kim",
     role: "Investor",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://randomuser.me/api/portraits/men/5.jpeg",
     startup: "Quantum Ventures",
     Linkedin: "https://linkedin.com/in/noahkim",
     Twitter: "https://twitter.com/noahkim",
@@ -350,7 +254,7 @@ export const persons = [
   {
     name: "Olivia Smith",
     role: "Product Manager",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://randomuser.me/api/portraits/women/6.jpeg",
     startup: "HealthTrack Pro",
     Linkedin: "https://linkedin.com/in/oliviasmith",
     Twitter: "https://twitter.com/oliviasmith",
@@ -358,7 +262,7 @@ export const persons = [
   {
     name: "Ethan Johnson",
     role: "Design Lead",
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
+    image: "https://randomuser.me/api/portraits/men/7.jpeg",
     startup: "UX Factory",
     Linkedin: "https://linkedin.com/in/ethanj",
     Twitter: "https://twitter.com/ethanj",
@@ -366,7 +270,7 @@ export const persons = [
   {
     name: "Ava Martinez",
     role: "Tech Lead",
-    image: "https://randomuser.me/api/portraits/women/8.jpg",
+    image: "https://randomuser.me/api/portraits/women/8.jpeg",
     startup: "CodeCrafters",
     Linkedin: "https://linkedin.com/in/avamart",
     Twitter: "https://twitter.com/avamart",
@@ -374,7 +278,7 @@ export const persons = [
   {
     name: "Lucas Brown",
     role: "Legal Counsel",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
+    image: "https://randomuser.me/api/portraits/men/9.jpeg",
     startup: "CyberSecure",
     Linkedin: "https://linkedin.com/in/lucasbrown",
     Twitter: "https://twitter.com/lucasbrown",
@@ -382,7 +286,7 @@ export const persons = [
   {
     name: "Isabella Lee",
     role: "DevOps Engineer",
-    image: "https://randomuser.me/api/portraits/women/10.jpg",
+    image: "https://randomuser.me/api/portraits/women/10.jpeg",
     startup: "CloudForge",
     Linkedin: "https://linkedin.com/in/isabellalee",
     Twitter: "https://twitter.com/isabellalee",
@@ -392,7 +296,7 @@ export const persons = [
 export const ventures = [
   {
     name: "Tech Ventures",
-    logo: "https://example.com/techventures-logo.png",
+    logo: "https://example.com/techventures-logo.jpeg",
     location: "San Francisco, CA",
     investmentStages: ["Seed", "Series A", "Series B"],
     sectors: ["Fintech", "AI & Data", "Cybersecurity"],
@@ -400,7 +304,7 @@ export const ventures = [
   },
   {
     name: "Health Innovators",
-    logo: "https://example.com/healthinnovators-logo.png",
+    logo: "https://example.com/healthinnovators-logo.jpeg",
     location: "New York, NY",
     investmentStages: ["Series A", "Series B"],
     sectors: ["Healthtech", "Greentech"],
@@ -408,7 +312,7 @@ export const ventures = [
   },
   {
     name: "AgriTech Capital",
-    logo: "https://example.com/agritechcapital-logo.png",
+    logo: "https://example.com/agritechcapital-logo.jpeg",
     location: "Chicago, IL",
     investmentStages: ["Seed", "Series A"],
     sectors: ["AgriTech", "Sustainability"],
@@ -416,7 +320,7 @@ export const ventures = [
   },
   {
     name: "Retail Ventures",
-    logo: "https://example.com/retailventures-logo.png",
+    logo: "https://example.com/retailventures-logo.jpeg",
     location: "Los Angeles, CA",
     investmentStages: ["Series B", "Growth"],
     sectors: ["E-commerce", "Retail"],

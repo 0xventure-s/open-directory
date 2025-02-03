@@ -31,6 +31,7 @@ import {
   WebhookIcon,
   Pizza,
   Move,
+  FrameIcon,
 } from "lucide-react";
 import { Startup } from "@/interface";
 import Link from "next/link";
@@ -48,7 +49,7 @@ const iconMapping: Record<string, React.ReactNode> = {
   PropTech: <Home className="mr-1 h-3 w-3 text-orange-500" />,
   MediaTech: <Camera className="mr-1 h-3 w-3 text-purple-500" />,
   CyberSecurity: <Shield className="mr-1 h-3 w-3 text-teal-500" />,
-  TicketTech: <Ticket className="mr-1 h-3 w-3 text-pink-500" />,
+  EmergingTech: <FrameIcon className="mr-1 h-3 w-3 text-pink-500" />,
   CommunityTech: <Users className="mr-1 h-3 w-3 text-blue-400" />,
   Technology: <Settings className="mr-1 h-3 w-3 text-gray-400" />,
   AgroTech: <Tractor className="mr-1 h-3 w-3 text-amber-700" />,
