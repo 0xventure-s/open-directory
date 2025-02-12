@@ -16,7 +16,6 @@ import {
   Twitter,
   MapPin,
   Book,
-  Leaf,
   ShoppingCart,
   Car,
   Home,
@@ -26,12 +25,12 @@ import {
   Settings,
   Tractor,
   Cpu,
-  Ticket,
   Server,
   WebhookIcon,
   Pizza,
   Move,
   FrameIcon,
+  Dna,
 } from "lucide-react";
 import { Startup } from "@/interface";
 import Link from "next/link";
@@ -43,7 +42,7 @@ const iconMapping: Record<string, React.ReactNode> = {
   HealthTech: <Heart className="mr-1 h-3 w-3 text-red-500" />,
   EdTech: <Book className="mr-1 h-3 w-3 text-yellow-500" />,
   Ecommerce: <ShoppingCart className="mr-1 h-3 w-3 text-green-500" />,
-  Greentech: <Leaf className="mr-1 h-3 w-3 text-green-400" />,
+  BioTech: <Dna className="mr-1 h-3 w-3 text-green-400" />,
   LogisticsTech: <Car className="mr-1 h-3 w-3 text-gray-500" />,
   Blockchain: <Cpu className="mr-1 h-3 w-3 text-indigo-500" />,
   PropTech: <Home className="mr-1 h-3 w-3 text-orange-500" />,
@@ -77,7 +76,7 @@ export default function StartupCard({ startup }: Props) {
   };
 
   return (
-    <Card className="w-120 h-fit">
+    <Card className="w-120 h-fit ">
       <CardHeader className="flex flex-row items-center gap-4">
         <div className="h-16 w-16 rounded-lg overflow-hidden p-1">
           <Image

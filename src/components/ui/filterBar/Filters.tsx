@@ -9,7 +9,6 @@ import {
   Heart,
   Book,
   ShoppingCart,
-  Leaf,
   Car,
   Cpu,
   Home,
@@ -23,6 +22,7 @@ import {
   WebhookIcon,
   Pizza,
   FrameIcon,
+  Dna,
 } from "lucide-react";
 import {
   Sheet,
@@ -50,9 +50,9 @@ const filterCategories: FilterCategory[] = [
     id: "Fintech",
   },
   {
-    icon: <Leaf className="h-3 w-3 text-green-400" />,
-    label: "Greentech",
-    id: "Greentech",
+    icon: <Dna className="h-3 w-3 text-green-400" />,
+    label: "BioTech",
+    id: "BioTech",
   },
   {
     icon: <Heart className="h-3 w-3 text-red-500" />,
