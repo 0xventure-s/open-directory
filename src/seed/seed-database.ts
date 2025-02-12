@@ -30,7 +30,7 @@ async function main() {
           description: startupFields.description,
           marketType: startupFields.marketType,
           marketIcon: startupFields.marketIcon,
-          typeName: startupFields.typeName,  // Campo requerido
+          typeName: startupFields.typeName!,  // Campo requerido
           typeIcon: startupFields.typeIcon,
           investmentSerie: startupFields.investmentSerie,
           investmentIcon: startupFields.investmentIcon,

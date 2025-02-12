@@ -15,7 +15,7 @@ model Startup {
   description     String
   marketType      String
   marketIcon      String
-  typeName        String
+  typeName        String?
   typeIcon        String
   investmentSerie String?
   investmentIcon  String?

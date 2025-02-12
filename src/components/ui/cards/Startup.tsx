@@ -31,6 +31,8 @@ import {
   Move,
   FrameIcon,
   Dna,
+
+  TrendingUp,
 } from "lucide-react";
 import { Startup } from "@/interface";
 import Link from "next/link";
@@ -58,6 +60,7 @@ const iconMapping: Record<string, React.ReactNode> = {
   Mobility: <Move className="mr-1 h-3 w-3 text-gray-400" />,
   InfrastructureTech: <WebhookIcon className="mr-1 h-3 w-3 text-blue-500" />,
   FoodTech: <Pizza className="mr-1 h-3 w-3 text-red-400" />,
+  TrendingUp: <TrendingUp className="mr-1 h-3 w-3 text-green-500" />,
 };
 interface Props {
   startup: Startup;
@@ -104,7 +107,7 @@ export default function StartupCard({ startup }: Props) {
             {iconMapping[startup.marketIcon] || startup.typeIcon}{" "}
             {startup.marketType}
           </Badge>
-          <Badge variant="secondary">{startup.typeName}</Badge>
+          
           {startup.investmentIcon && (
             <Badge className="bg-emerald-500/10 text-emerald-500">
               {iconMapping[startup.investmentIcon!]} {startup.investmentSerie}

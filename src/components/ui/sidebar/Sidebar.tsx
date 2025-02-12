@@ -78,26 +78,6 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   Startups
                 </Button>
               </Link>
-              <Link href="/builders">
-                <Button
-                  variant={pathname === "/founders" ? "link" : "ghost"}
-                  className="w-full justify-start gap-2"
-                  onClick={onClose}
-                >
-                  <Users className="h-4 w-4" />
-                  Builders
-                </Button>
-              </Link>
-              <Link href="/ventures">
-                <Button
-                  variant={pathname === "/ventures" ? "link" : "ghost"}
-                  className="w-full justify-start gap-2"
-                  onClick={onClose}
-                >
-                  <Briefcase className="h-4 w-4" />
-                  Venture Capitals
-                </Button>
-              </Link>
               <Link href="/resources">
                 <Button
                   variant={pathname === "/resources" ? "link" : "ghost"}
@@ -106,6 +86,28 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                 >
                   <BookOpen className="h-4 w-4" />
                   Recursos
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button
+                  variant={pathname === "/" ? "ghost" : "ghost"}
+                  className={`w-full justify-start gap-2 ${pathname === "/" ? '' : 'text-gray-500'}`}
+                  onClick={onClose}
+                  disabled
+                >
+                  <Users className="h-4 w-4" />
+                  Builders (-)
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button
+                  variant={pathname === "/" ? "ghost" : "ghost"}
+                  className={`w-full justify-start gap-2 ${pathname === "/" ? '' : 'text-gray-500'}`}
+                  onClick={onClose}
+                  disabled
+                >
+                  <Briefcase className="h-4 w-4" />
+                  Venture Capitals (-)
                 </Button>
               </Link>
               <Link href="/">
@@ -138,7 +140,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                   className="w-full justify-start gap-2"
                 >
                   <Heart className="h-4 w-4" />
-                  Favoritos
+                  Mis Favoritos
                 </Button>
               </Link>
               <Link href="/aracc">

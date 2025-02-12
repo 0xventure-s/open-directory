@@ -4,9 +4,9 @@ export interface Startup {
   logosrc: string;
   location: string;
   description: string;
-  marketType: string;
+  marketType?: string |null;
   marketIcon: string;
-  typeName: string;
+  typeName?: string | null ;
   typeIcon: string;
   investmentSerie: string | null;  
   investmentIcon: string | null;   

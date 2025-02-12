@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-import { getFreshRandomStartups, getRandomPeople, getRandomVentures } from "@/actions/startups";
+import { getFreshRandomStartups,  } from "@/actions/startups";
 /* eslint-disable @typescript-eslint/no-unused-vars */
   
 import MainLayout from "@/components/layout/MainLayout";
@@ -16,9 +16,8 @@ import Link from "next/link";
 
 export default async function NamePage() {
 
-  const startups = await getFreshRandomStartups(3);
-  const venture = await getRandomVentures(3);
-  const persons = await getRandomPeople(8);
+  const startups = await getFreshRandomStartups(9);
+  
 
 
   return (
@@ -37,16 +36,16 @@ export default async function NamePage() {
           </div>
         </section>
 
-        <section>
+        {/* <section>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Builders Descatados</h2>
             <Button variant="outline" asChild>
               <Link href="/startups">Ver todas</Link>
             </Button>
           </div>
-          <div className="grid gap-6 ">
-          <FounderGrid person={persons}/>
-          </div>
+          <div className="grid gap-6 "> */}
+          {/* <FounderGrid person={persons}/> */}
+          {/* </div>
         </section>
 
         <section>
@@ -56,10 +55,10 @@ export default async function NamePage() {
               <Link href="/startups">Ver todas</Link>
             </Button>
           </div>
-          <div className="grid gap-6">
-            <VentureGrid ventures={venture}/>
-          </div>
-        </section>
+          <div className="grid gap-6"> */}
+            {/* <VentureGrid ventures={venture}/> */}
+          {/* </div>
+        </section> */}
       </div>
     </MainLayout>
   );

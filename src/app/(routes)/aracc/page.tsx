@@ -1,19 +1,12 @@
-
 export default function aracc() {
   return (
-    <>
-    <div className=" mt-10">
-      <h1 className="text-6xl font-bold">Ar/acc</h1>
+      <> 
+    <div className="flex  items-center justify-center h-screen gap-x-5 mx-5">
+      <h1 className="text-center items-center">Narratives Violators by Nature
+      </h1>
+      <p className="text-gray-500 text-xs">(Soon)</p>
     </div>
-      <p className=" text-gray-500 text-sm">Narratives Violators by Nature</p>
-
-    <h1 >In a world where stories often adhere to a prescribed structure, guided by tradition, convention, and societal expectations, there exists a breed of narratives that refuse to follow the rules. These stories are not bound by logic, nor do they cater to the comfort of the audience. They are the rebels, the outliers, the violators. They break the mold and invite us to question everything we thought we knew about storytelling.
-    In a world where stories often adhere to a prescribed structure, guided by tradition, convention, and societal expectations, there exists a breed of narratives that refuse to follow the rules. These stories are not bound by logic, nor do they cater to the comfort of the audience. They are the rebels, the outliers, the violators. They break the mold and invite us to question everything we thought we knew about storytelling.
-    In a world where stories often adhere to a prescribed structure, guided by tradition, convention, and societal expectations, there exists a breed of narratives that refuse to follow the rules. These stories are not bound by logic, nor do they cater to the comfort of the audience. They are the rebels, the outliers, the violators. They break the mold and invite us to question everything we thought we knew about storytelling.
-    In a world where stories often adhere to a prescribed structure, guided by tradition, convention, and societal expectations, there exists a breed of narratives that refuse to follow the rules. These stories are not bound by logic, nor do they cater to the comfort of the audience. They are the rebels, the outliers, the violators. They break the mold and invite us to question everything we thought we knew about storytelling.
-    In a world where stories often adhere to a prescribed structure, guided by tradition, convention, and societal expectations, there exists a breed of narratives that refuse to follow the rules. These stories are not bound by logic, nor do they cater to the comfort of the audience. They are the rebels, the outliers, the violators. They break the mold and invite us to question everything we thought we knew about storytelling.
-    </h1>
-
+    
     </>
   );
 }
