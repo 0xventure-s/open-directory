@@ -1,4 +1,4 @@
-import { Download, Book, LinkIcon, ImagesIcon } from "lucide-react";
+import { Download, LinkIcon, ImagesIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -18,15 +18,12 @@ export default function ResourcesPage() {
       </div>
 
       <Tabs defaultValue="images" className="space-y-4">
-        <TabsList className="grid grid-cols-3 gap-4 w-full md:w-fit ">
+        <TabsList className="grid grid-cols-2 gap-4 w-full md:w-fit ">
           <TabsTrigger value="images" className="flex items-center gap-2">
             <ImagesIcon className="h-4 w-4 text-foreground" />
             Fondos
           </TabsTrigger>
-          <TabsTrigger value="books" className="flex items-center gap-2">
-            <Book className="h-4 w-4 text-foreground" />
-            Libros
-          </TabsTrigger>
+         
           <TabsTrigger value="links" className="flex items-center gap-2">
             <LinkIcon className="h-4 w-4 text-foreground z-10" />
             Links
@@ -69,25 +66,6 @@ export default function ResourcesPage() {
           })}
         </TabsContent>
 
-        <TabsContent value="books" className="grid gap-4 md:grid-cols-3">
-          {books.map((book) => (
-            <Card key={book.id}>
-              <CardHeader>
-                <CardTitle>{book.title}</CardTitle>
-                <CardDescription>{book.author}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {book.description}
-                </p>
-                <Button variant="outline" className="w-full">
-                  <Book className="h-4 w-4 mr-2" />
-                  Ver más
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </TabsContent>
 
         <TabsContent
           value="links"
@@ -146,26 +124,7 @@ const images = [
   },
 ];
 
-const books = [
-  {
-    id: 1,
-    title: "Zero to One",
-    author: "Peter Thiel",
-    description: "Notes on startups, or how to build the future",
-  },
-  {
-    id: 2,
-    title: "The Lean Startup",
-    author: "Eric Ries",
-    description: "How Today's Entrepreneurs Use Continuous Innovation",
-  },
-  {
-    id: 3,
-    title: "The Hard Thing About Hard Things",
-    author: "Ben Horowitz",
-    description: "Building a Business When There Are No Easy Answers",
-  },
-];
+
 
 const links = [
   {
@@ -178,10 +137,155 @@ const links = [
   },
   {
     id: 2,
-    title: "Appgentina",
-    category: "Plataforma",
-    description: "Descubrí y compartí los mejores productos digitales",
-    url: "https://appgentina.com.ar/",
-    logo: "/appgentina.png",
+    title: "Product Hunt",
+    category: "Descubrimiento",
+    description: "Encuentra las mejores startups y productos tecnológicos",
+    url: "https://www.producthunt.com/",
+    logo: "https://ph-static.imgix.net/ph-favicon.png",
+  },
+  {
+    id: 3,
+    title: "Indie Hackers",
+    category: "Comunidad",
+    description: "Historias de emprendedores bootstrapped",
+    url: "https://www.indiehackers.com/",
+    logo: "https://www.indiehackers.com/images/ih-logo.svg",
+  },
+  {
+    id: 4,
+    title: "Crunchbase",
+    category: "Datos",
+    description: "Información sobre startups, inversores y tendencias",
+    url: "https://www.crunchbase.com/",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Crunchbase_logo.png",
+  },
+  {
+    id: 5,
+    title: "AngelList",
+    category: "Inversión",
+    description: "Plataforma para startups que buscan inversión o talento",
+    url: "https://angel.co/",
+    logo: "https://angel.co/images/icons/favicon-32x32.png",
+  },
+  {
+    id: 6,
+    title: "Startup Stash",
+    category: "Recursos",
+    description: "Herramientas y recursos para startups",
+    url: "https://startupstash.com/",
+    logo: "https://startupstash.com/wp-content/uploads/2022/03/favicon.png",
+  },
+  {
+    id: 7,
+    title: "NoCode.tech",
+    category: "No Code",
+    description: "Recursos y herramientas para crear sin programar",
+    url: "https://www.nocode.tech/",
+    logo: "https://www.nocode.tech/assets/img/logos/nocode-logo.png",
+  },
+  {
+    id: 8,
+    title: "MicroAcquire",
+    category: "Adquisición",
+    description: "Compra y vende startups fácilmente",
+    url: "https://microacquire.com/",
+    logo: "https://microacquire.com/static/images/logo.svg",
+  },
+  {
+    id: 9,
+    title: "SaaS Hub",
+    category: "SaaS",
+    description: "Lista curada de herramientas y recursos SaaS",
+    url: "https://www.saashub.com/",
+    logo: "https://www.saashub.com/favicon.ico",
+  },
+  {
+    id: 10,
+    title: "First Round Review",
+    category: "Blog",
+    description: "Consejos y estrategias de expertos en startups",
+    url: "https://review.firstround.com/",
+    logo: "https://firstround.com/assets/logos/first-round-capital-logo.png",
+  },
+  {
+    id: 11,
+    title: "Hacker News",
+    category: "Comunidad",
+    description: "Noticias y debates sobre startups y tecnología",
+    url: "https://news.ycombinator.com/",
+    logo: "https://news.ycombinator.com/favicon.ico",
+  },
+  {
+    id: 12,
+    title: "BetaList",
+    category: "Validación",
+    description: "Descubre startups en etapa temprana",
+    url: "https://betalist.com/",
+    logo: "https://betalist.com/assets/favicon/favicon-32x32.png",
+  },
+  {
+    id: 13,
+    title: "Founder Institute",
+    category: "Aceleradora",
+    description: "Programa global para ayudar a lanzar startups",
+    url: "https://fi.co/",
+    logo: "https://fi.co/img/fi-logo.svg",
+  },
+  {
+    id: 14,
+    title: "500 Startups",
+    category: "Inversión",
+    description: "Fondo de inversión y aceleradora global",
+    url: "https://500.co/",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/500_Startups_logo.svg/1024px-500_Startups_logo.svg.png",
+  },
+  {
+    id: 15,
+    title: "OpenVC",
+    category: "Inversión",
+    description: "Directorio de inversores con filtros avanzados",
+    url: "https://openvc.app/",
+    logo: "https://openvc.app/assets/favicon/favicon-32x32.png",
+  },
+  {
+    id: 16,
+    title: "Failory",
+    category: "Aprendizaje",
+    description: "Historias de fracasos y aprendizajes de startups",
+    url: "https://failory.com/",
+    logo: "https://failory.com/favicon.ico",
+  },
+  {
+    id: 17,
+    title: "Stripe Atlas",
+    category: "Legal/Finanzas",
+    description: "Crea una empresa en EE.UU. desde cualquier parte del mundo",
+    url: "https://stripe.com/atlas",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Stripe_Logo%2C_revised_2016.svg/512px-Stripe_Logo%2C_revised_2016.svg.png",
+  },
+  {
+    id: 18,
+    title: "Toptal Startups",
+    category: "Talento",
+    description: "Encuentra talento de primer nivel para tu startup",
+    url: "https://www.toptal.com/startups",
+    logo: "https://www.toptal.com/apple-touch-icon.png",
+  },
+  {
+    id: 19,
+    title: "TechCrunch",
+    category: "Noticias",
+    description: "Últimas noticias y análisis sobre startups y tecnología",
+    url: "https://techcrunch.com/",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/TechCrunch_logo.svg",
+  },
+  {
+    id: 20,
+    title: "SaaStr",
+    category: "Educación",
+    description: "Recursos y eventos para emprendedores SaaS",
+    url: "https://www.saastr.com/",
+    logo: "https://www.saastr.com/wp-content/uploads/2019/04/saastr-logo.png",
   },
 ];
+

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Momento del Aceleracionismo Argentino",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,6 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:image" content="public/open-directory.vercel.app_.png" />
+        <meta property="og:title" content="Ar/acc" />
+        <meta property="og:description" content="Aceleracionismo Argentino" />
+      </head>
       <body
         className={` ${General.className} antialiased`}
       >
