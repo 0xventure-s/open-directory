@@ -298,7 +298,7 @@ export const initialData = {
     },
     {
       name: "Mycorium Biotech",
-      logosrc: "mycoriumBiotech.jpeg",
+      logosrc: "MycoriumBiotech.jpeg",
       location: "Rosario",
       description:
         "Estamos cultivando la próxima generación de materiales mediante el reciclaje de desechos a través de fermentaciones fúngicas y transformándolos en biocuero.",
@@ -331,7 +331,7 @@ export const initialData = {
     },
     {
       name: "Nanotransfer",
-      logosrc: "nanotransfer.jpeg",
+      logosrc: "Nanotransfer.jpeg",
       location: "Córdoba",
       description:
         "Nanotransfer está desarrollando la próxima generación de sistemas de administración de genes para ser aplicados en terapias genéticas.",
@@ -384,7 +384,7 @@ export const initialData = {
     },
     {
       name: "Semion",
-      logosrc: "semion.jpeg",
+      logosrc: "Semion.jpeg",
       location: "Buenos Aires",
       description:
         "Tecnología de manipulación del comportamiento de los insectos para el control de plagas agrícolas.",
@@ -475,7 +475,7 @@ export const initialData = {
     },
     {
       name: "Untech",
-      logosrc: "untech.jpeg",
+      logosrc: "Untech.jpeg",
       location: "Tucumán",
       description:
         "Somos un equipo de científicos y emprendedores que trabaja para ayudar a los millones de personas en todo el mundo que viven con heridas crónicas. Hemos desarrollado una cura innovadora y hemos trabajado incansablemente para poder hacerla disponible para cada paciente que lo necesite.",
@@ -526,7 +526,7 @@ export const initialData = {
     },
     {
       name: "ZaviaBio",
-      logosrc: "Zaviabio.jpeg",
+      logosrc: "ZaviaBio.jpeg",
       location: "Buenos Aires",
       description:
         "Desbloquea el potencial de las biomoléculas para desarrollar nuevas familias de productos biológicos capaces de resolver problemas agrícolas urgentes.",
@@ -549,7 +549,7 @@ export const initialData = {
     },
     {
       name: "Zev Biotech",
-      logosrc: "zevbiotech.jpeg",
+      logosrc: "ZevBiotech.jpeg",
       location: "Buenos Aires",
       description:
         "Zev Biotech es una empresa enfocada en soluciones biotecnológicas.",
@@ -640,7 +640,7 @@ export const initialData = {
     },
     {
       name: "Limay Biosciences",
-      logosrc: "limaybiosciences.jpeg",
+      logosrc: "LimayBiosciences.jpeg",
       location: "Buenos Aires",
       description:
         "En Limay, estamos revolucionando los diagnósticos moleculares y los haremos disponibles para todos, siempre y donde sea necesario, utilizando innovaciones biotecnológicas para crear soluciones rápidas, simples y accesibles.",
@@ -865,7 +865,7 @@ export const initialData = {
     },
     {
       name: "Sensify",
-      logosrc: "sensify.jpeg",
+      logosrc: "Sensify.jpeg",
       location: "Rosario",
       description:
         "Plataforma IoT para evitar cortes en la cadena de frío y conectar marcas de consumo masivo de alimentos y bebidas con consumidores.",
