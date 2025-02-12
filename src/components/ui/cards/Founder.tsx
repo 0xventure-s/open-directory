@@ -45,7 +45,7 @@ export default function FounderCard({ person }: Props) {
       </CardContent>
 
       <CardFooter className="flex justify-end p-2 gap-2">
-        {person.Linkedin&& (
+        {person.Linkedin && (
           <Button variant="ghost" size="icon" className="h-6 w-6" asChild>
             <Link
               href={person.Linkedin}
