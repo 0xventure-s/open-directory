@@ -96,10 +96,12 @@ export default function ResourcesPage() {
           {links.map((link) => (
             <Card key={link.id} className="flex flex-col">
               <CardHeader className="flex-row gap-4 items-center space-y-0">
-                <img
+                <Image
                   src={link.logo || "/placeholder.svg"}
                   alt={`${link.title} logo`}
                   className="h-12 w-12 rounded-lg object-contain"
+                  width={48}
+                  height={48}
                 />
                 <div className="space-y-1">
                   <CardTitle className="text-lg">{link.title}</CardTitle>
