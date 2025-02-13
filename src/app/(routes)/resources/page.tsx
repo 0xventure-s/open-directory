@@ -127,6 +127,11 @@ const images = [
     title: "WallPaper Mobile",
     url: "/fondodepantalla.png",
   },
+  {
+    id: 4,
+    title: "Logotipo White",
+    url: "/arcccc.png",
+  },
 ];
 
 
