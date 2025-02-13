@@ -28,7 +28,7 @@ export default async function NamePage() {
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Startups Destacadas</h2>
             <Button variant="outline" asChild>
-              <Link href="/startups">Ver todas</Link>
+              <Link href="https://forms.gle/Dz91AfLy57kTcUUv9">Ver todas</Link>
             </Button>
           </div>
           <div className="grid gap-6 lg:flex">
