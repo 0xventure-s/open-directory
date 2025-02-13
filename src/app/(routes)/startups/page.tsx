@@ -34,7 +34,7 @@ export default async function StartupPage({ searchParams }: StartupPageProps) {
               Startups Argentinas
             </h2>
             <Button variant="outline" className="border-blue-200" asChild>
-              <Link href="https://forms.gle/7T7goRUFL9UXVAan6" target="_blank">+ Agregar Startups</Link>
+              <Link href="https://forms.gle/Dz91AfLy57kTcUUv9" target="_blank">+ Agregar Startups</Link>
             </Button>
           </div>
 
